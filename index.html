@@ -78,7 +78,7 @@
   .chip span{color:#8fd6f2;margin-right:7px;font-size:12px;letter-spacing:.1em}
 
   .poster{
-    position:relative;border-radius:18px;overflow:hidden;
+    position:relative;border-radius:18px;overflow:hidden;margin:0;
     box-shadow:0 40px 90px -30px rgba(0,10,40,.85), 0 0 0 1px rgba(255,255,255,.12);
     transform:rotate(.6deg);
   }
@@ -120,60 +120,60 @@
   .stat{background:#fff;padding:24px 26px}
   .stat b{display:block;font-size:38px;line-height:1;font-weight:800;letter-spacing:-.02em;color:var(--navy-2)}
   .stat b i{font-style:normal;font-size:16px;color:var(--muted);margin-left:6px;font-weight:600}
-  .stat span{display:block;margin-top:9px;font-size:13.5px;color:var(--muted);letter-spacing:.02em}
+  .stat span{display:block;margin-top:9px;font-size:13.5px;color:var(--muted);letter-spacing:.02em;line-height:1.7}
 
-  /* ============ FILTER ============ */
-  .filters{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 34px}
-  .filters button{
-    font-family:inherit;font-size:14px;cursor:pointer;
-    padding:9px 18px;border-radius:999px;border:1px solid var(--line);
-    background:#fff;color:#3a4658;transition:all .18s ease;
+  /* ============ 作品总览 ============ */
+  .cats{column-count:2;column-gap:60px}
+  .cat{break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:38px}
+  .cat h4{
+    margin:0 0 2px;font-size:12.5px;letter-spacing:.18em;color:var(--blue);
+    font-weight:700;display:flex;align-items:baseline;gap:10px;
   }
-  .filters button:hover{border-color:#c3d0e6;color:var(--navy)}
-  .filters button.on{background:var(--navy-2);border-color:var(--navy-2);color:#fff;box-shadow:0 8px 20px -8px rgba(10,42,107,.6)}
-  .filters button em{font-style:normal;opacity:.55;margin-left:6px;font-size:12px}
+  .cat h4 i{font-style:normal;font-family:var(--serif);color:#b3bfd1;font-size:12px;letter-spacing:.1em}
+  .cat ul{list-style:none;margin:0;padding:0;border-top:1.5px solid #cfd9e8}
+  .cat li{
+    display:grid;grid-template-columns:1fr auto;gap:14px;align-items:baseline;
+    padding:15px 2px;border-bottom:1px solid var(--line);
+  }
+  .cat .wt{font-size:16.5px;font-weight:700;letter-spacing:-.005em;line-height:1.5;color:#16202f}
+  .cat .wt em{
+    display:block;font-style:normal;font-size:13px;font-weight:400;color:var(--muted);
+    margin-top:3px;letter-spacing:.01em;line-height:1.6;
+  }
+  .cat .wr{display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+  .cat .wy{font-size:12.5px;color:#8b99ae;letter-spacing:.04em}
+  .cat .gj{font-size:12.5px;font-weight:600;color:var(--blue);border-bottom:1px solid rgba(26,79,214,.3);padding-bottom:1px}
+  .cat .gj:hover{color:#0d3796;border-bottom-color:#0d3796}
 
-  /* ============ CARDS ============ */
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px}
-  .card{
-    position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;
-    padding:26px 26px 24px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
-    display:flex;flex-direction:column;min-height:196px;
-  }
-  .card:hover{transform:translateY(-3px);box-shadow:0 22px 44px -26px rgba(10,30,70,.4);border-color:#cfdcf1}
-  .card .no{
-    font-family:var(--serif);font-size:13px;letter-spacing:.1em;color:#9aa8bd;font-weight:600;
-  }
-  .card h3{
-    font-size:18.5px;line-height:1.5;margin:10px 0 10px;font-weight:700;letter-spacing:-.005em;
-    word-break:break-word;
-  }
-  .card h3 a{background-image:linear-gradient(var(--blue),var(--blue));background-size:0 1.5px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .3s ease}
-  .card:hover h3 a{background-size:100% 1.5px}
-  .card p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.78;flex:1}
-  .card .foot{display:flex;align-items:center;gap:8px;margin-top:18px;flex-wrap:wrap}
   .tag{
     font-size:11.5px;letter-spacing:.06em;padding:4px 10px;border-radius:6px;
-    background:rgba(26,79,214,.07);color:#22509f;font-weight:600;
+    background:rgba(26,79,214,.07);color:#22509f;font-weight:600;white-space:nowrap;
   }
   .tag.year{background:#f0f3f9;color:#61708a}
   .tag.pic{background:rgba(46,197,232,.14);color:#0d7d94}
-  .card[hidden]{display:none}
 
-  /* ============ SPOTLIGHT ============ */
-  .case{border-top:1px solid var(--line);padding:72px 0}
+  /* ============ CASES ============ */
+  .case{border-top:1px solid var(--line);padding:78px 0}
   .case:first-of-type{border-top:0;padding-top:0}
-  .case-head{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:baseline;margin-bottom:32px}
+  .case-head{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:baseline;margin-bottom:14px}
   .case-no{
     font-family:var(--serif);font-size:46px;line-height:1;font-weight:700;color:#dbe3f2;letter-spacing:-.03em;
   }
-  .case-head h3{font-size:clamp(22px,2.4vw,30px);margin:0 0 8px;font-weight:800;letter-spacing:-.01em}
-  .case-head .case-desc{margin:0;color:var(--muted);font-size:15.5px;max-width:52em}
+  .case-head h3{font-size:clamp(24px,2.6vw,34px);margin:0 0 6px;font-weight:800;letter-spacing:-.015em}
+  .case-head .sub{
+    margin:0;color:#4a5a70;font-size:15px;letter-spacing:.02em;
+  }
   .case-meta{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0 0}
+  .case-body{margin:26px 0 34px;display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  .case-body p{margin:0;color:#2b3648;font-size:16px;line-height:1.95}
+  .case-body.single{grid-template-columns:1fr;max-width:56em}
 
+  /* ============ 图库 ============ */
   .gal{display:grid;gap:14px;grid-template-columns:repeat(3,1fr);grid-auto-flow:dense}
   .gal.two{grid-template-columns:1fr 1fr}
-  .gal.five > .shot:first-child{grid-column:span 2}
+  .gal.four{grid-template-columns:repeat(4,1fr)}
+  .gal.one{grid-template-columns:1fr}
+  .gal.five > .shot:last-child{grid-column:span 2;aspect-ratio:8/3}
   .shot{
     position:relative;overflow:hidden;border-radius:12px;background:#f1f5fa;
     border:1px solid var(--line);cursor:zoom-in;aspect-ratio:4/3;margin:0;
@@ -187,14 +187,16 @@
     background:linear-gradient(180deg,rgba(6,16,38,0) 0%,rgba(6,16,38,.66) 40%,rgba(6,16,38,.95) 100%);
   }
   .shot img.contain{object-fit:contain;background:#fff}
+  .shot.natural{aspect-ratio:auto}
+  .shot.natural img{height:auto}
 
   /* 商品/图纸类：图注放在图下方，不压住内容 */
   .shot.plain{display:flex;flex-direction:column;background:#fbfcfe}
-  .shot.plain img{flex:1;min-height:0;height:auto;object-fit:contain;padding:12px 12px 6px}
+  .shot.plain img{flex:1;min-height:0;height:auto;object-fit:contain;padding:10px 10px 4px}
   .shot.plain:hover img{transform:none}
   .shot.plain figcaption{
-    position:static;padding:10px 14px 12px;color:#3d4a5e;text-shadow:none;
-    border-top:1px solid var(--line);background:none;font-size:12.5px;line-height:1.55;
+    position:static;padding:9px 12px 11px;color:#3d4a5e;text-shadow:none;
+    border-top:1px solid var(--line);background:none;font-size:12px;line-height:1.5;
   }
 
   /* 舵机案例的双栏 */
@@ -204,14 +206,8 @@
   .qa b{display:block;font-size:15px;font-weight:700;margin-bottom:6px;color:var(--navy-2)}
   .qa span{font-size:14px;color:var(--muted);line-height:1.72}
 
-  .case-note{
-    margin-top:30px;padding:18px 22px;border-radius:12px;background:var(--mist);
-    border:1px solid var(--line);font-size:14.5px;color:#3d4a5e;
-  }
-  .case-note b{color:var(--navy-2)}
-
   /* ============ STEPS ============ */
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:44px}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:8px}
   .step{background:#fff;padding:26px 24px}
   .step i{font-style:normal;font-family:var(--serif);font-size:12.5px;letter-spacing:.14em;color:var(--cyan);font-weight:700}
   .step b{display:block;margin:10px 0 8px;font-size:16px;font-weight:700}
@@ -254,19 +250,22 @@
     .steps{grid-template-columns:1fr 1fr}
     .orgs{grid-template-columns:1fr;gap:30px}
     .sec{padding:72px 0}
-    .gal{grid-template-columns:1fr 1fr}
+    .gal,.gal.four{grid-template-columns:1fr 1fr}
     .case-split{grid-template-columns:1fr}
+    .case-body{grid-template-columns:1fr;gap:16px}
     .case-head{grid-template-columns:1fr;gap:8px}
     .case-no{font-size:32px}
+    .cats{column-count:1}
   }
   @media (max-width:620px){
-    .gal,.gal.two{grid-template-columns:1fr}
+    .gal,.gal.two,.gal.four,.gal.one{grid-template-columns:1fr}
+    .gal.five > .shot:last-child{grid-column:auto;aspect-ratio:4/3}
     .wrap{padding:0 20px}
   }
   @media print{
     .hero,.closing{background:#fff!important;color:#000!important}
     h1{color:#000!important;-webkit-text-fill-color:#000}
-    .lb,.filters{display:none!important}
+    .lb{display:none!important}
   }
 </style>
 </head>
@@ -280,17 +279,17 @@
       <h1>看少年<br>科创风采</h1>
       <p class="hero-sub">
         《人工智能时代的科技教育》公开课 · 学生科创作品集。
-        十七件作品，来自一间普通中学的科创中心 —— 从一颗会转的电机，到一台会认人的龙舟；
+        十七件作品，来自同一间科创中心 —— 从一颗会转的电机，到一条会认人的龙舟；
         从激光在木板上走过的路径，到模型认出你抬手的那一帧。
-        <span class="hl">技术在这里不是答案，是孩子们提问的方式。</span>
+        <span class="hl">技术在这里不是答案，是孩子提问的方式。</span>
       </p>
       <div class="chips">
         <div class="chip"><span>时间</span>10 月 25 日 09:00—11:30</div>
         <div class="chip"><span>地点</span>温州园博园中国馆</div>
-        <div class="chip"><span>作品</span>17 件 / 5 个方向</div>
+        <div class="chip"><span>作品</span>17 组 / 5 个方向</div>
       </div>
     </div>
-    <figure class="poster" style="margin:0">
+    <figure class="poster">
       <img src="assets/poster.jpg?v=2" alt="2026 世界青年科学家峰会 万有引力π·青年TALK 专场 海报">
       <figcaption class="poster-cap">WYSS 2026 · 温州科技高级中学</figcaption>
     </figure>
@@ -303,264 +302,125 @@
     <div class="sec-head rv">
       <div class="kicker">关于这批作品</div>
       <h2>不是展品，是过程</h2>
-      <p class="lede">这些文档原本只是腾讯文档里的一个个链接 —— 有的是操作手册，有的是开发日志，有的只是一张还没写完的进度表。把它们放在一起，才看得见一条路：从「我能不能让它动起来」，到「它能替谁解决什么问题」。</p>
+      <p class="lede">这些项目原本只是校内文档里的一份份记录 —— 有的是操作手册，有的是开发日志，有的拍到一半就停了。把它们放在一起，才看得见一条路：从「我能不能让它动起来」，到「它能替谁解决什么问题」。</p>
     </div>
 
     <div class="about-grid">
       <div class="about-body rv">
-        <p>科创中心的设备清单写得很朴素：一台激光雕刻机、几台 3D 打印机、一堆舵机与开发板。但要把它变成课程，中间隔着大量琐碎的东西 —— 排烟管怎么接、木板怎么放平、模型为什么要加支撑、舵机的三根线到底哪根是信号线。</p>
-        <p>于是有了《科创中心入门指南》这样的文档：不讲原理，先讲怎么安全地把机器打开。也有了《什么样的舵机能够转？》这样看起来"太简单"的题目 —— 把一件小事拆到底，恰恰是工程思维最难的起点。</p>
-        <p>再往后，题目就变大了：用关键点检测识别划桨动作去驱动一条实体龙舟；用机器学习为国家级非遗瓯塑做配色辅助；用大模型给学生作文写批阅反馈；让一块白板自己把自己擦干净。技术开始落到具体的人、具体的场景上。</p>
+        <p>科创中心的设备清单写得很朴素：一台激光雕刻机、几台 3D 打印机、一堆舵机与开发板。但要把它变成课程，中间隔着大量琐碎的东西 —— 排烟管怎么接、木板怎么放平、模型为什么要加支撑、三根线里哪根才是信号线。</p>
+        <p>所以最早的一份作品，不是某个作品，而是一份《开机之前》：不讲原理，先讲怎么安全地把机器打开。再往后，题目才慢慢变大 —— 用关键点检测识别划桨动作，去驱动一条实体龙舟；用机器学习为国家级非遗瓯塑做配色辅助；用大模型给学生作文写批阅反馈。</p>
+        <p>下面按方向把十七件全部列出，其中七件保留了完整的过程影像，展开成后面的图集。技术落到具体的场地、具体的人身上：一块草地、一面白板、一位不知道该怎么站好的旅客。</p>
         <div class="quote">「万有引力π」的 π，是一个无限不循环的数。<br>少年人的好奇心大概也是这样 —— 不收敛，也不重复。</div>
       </div>
 
       <aside class="stats rv">
-        <div class="stat"><b>17<i>件</i></b><span>收录的学生科创作品与项目文档</span></div>
-        <div class="stat"><b>5<i>个</i></b><span>人工智能·交互 / 机器学习·设计 / 智能硬件·机器人 / 制造·工程 / 社团活动</span></div>
-        <div class="stat"><b>4<i>年</i></b><span>跨 2023—2026 的项目时间跨度</span></div>
-        <div class="stat"><b>2<i>类</i></b><span>既有可复用的操作手册，也有仍在迭代的原型</span></div>
+        <div class="stat"><b>17<i>组</i></b><span>作品与项目，全部在册</span></div>
+        <div class="stat"><b>26<i>帧</i></b><span>七件作品的过程照片、切片预览与图纸</span></div>
+        <div class="stat"><b>5<i>类</i></b><span>制造与工程 / 智能硬件 / 人工智能与交互 / 设计与研究 / 社团与活动</span></div>
+        <div class="stat"><b>3<i>年</i></b><span>跨 2023—2026 的持续迭代</span></div>
       </aside>
     </div>
   </div>
 </section>
 
-<!-- ================= 作品长廊 ================= -->
+<!-- ================= 作品总览 ================= -->
 <section class="sec alt" id="works">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="kicker">作品长廊</div>
+      <div class="kicker">作品总览</div>
       <h2>十七件作品，五条路径</h2>
-      <p class="lede">按方向浏览。带 <span class="tag pic" style="vertical-align:middle">图文</span> 标记的作品，下方有完整的过程图集。</p>
+      <p class="lede">按方向归档。带「图集」的作品在下方有完整的过程影像；其余是立项与过程记录，保留在册。</p>
     </div>
 
-    <div class="filters" id="filters">
-      <button class="on" data-f="all">全部<em>17</em></button>
-      <button data-f="ai">人工智能 · 交互<em>5</em></button>
-      <button data-f="ml">机器学习 · 设计<em>3</em></button>
-      <button data-f="hw">智能硬件 · 机器人<em>4</em></button>
-      <button data-f="make">制造 · 工程实践<em>3</em></button>
-      <button data-f="club">社团 · 活动<em>2</em></button>
-    </div>
+    <div class="cats rv">
 
-    <div class="grid" id="grid">
+      <div class="cat">
+        <h4>制造与工程<i>03</i></h4>
+        <ul>
+          <li><span class="wt">开机之前<em>科创中心设备的第一课</em></span><span class="wr"><span class="wy">2025</span><a class="gj" href="#case-open">图集</a></span></li>
+          <li><span class="wt">悬空之处<em>3D 打印的切片与支撑</em></span><span class="wr"><span class="wy">2026</span><a class="gj" href="#case-overhang">图集</a></span></li>
+          <li><span class="wt">拆开，再摆回去<em>电子标本的零件图谱</em></span><span class="wr"><span class="wy">2025</span><a class="gj" href="#case-teardown">图集</a></span></li>
+        </ul>
+      </div>
 
-      <article class="card rv" data-cat="ai">
-        <div class="no">01 / 2026</div>
-        <h3>数字人</h3>
-        <p>从形象设定到语音驱动，试着让屏幕里的那个"人"真的开口说话、对上口型。</p>
-        <div class="foot"><span class="tag">人工智能 · 交互</span><span class="tag year">2026</span></div>
-      </article>
+      <div class="cat">
+        <h4>智能硬件<i>04</i></h4>
+        <ul>
+          <li><span class="wt">让它转起来<em>从一颗减速电机开始</em></span><span class="wr"><span class="wy">2025</span><a class="gj" href="#case-motor">图集</a></span></li>
+          <li><span class="wt">草地上的农田<em>一套会看土的灌溉系统</em></span><span class="wr"><span class="wy">2024</span><a class="gj" href="#case-field">图集</a></span></li>
+          <li><span class="wt">一杯水的提醒<em>健康饮水伴侣</em></span><span class="wr"><span class="wy">2024</span></span></li>
+          <li><span class="wt">爬上白板<em>基于树莓派与 ROS2 的磁吸爬壁清洁机器人</em></span><span class="wr"><span class="wy">2025</span></span></li>
+        </ul>
+      </div>
 
-      <article class="card rv" data-cat="ml">
-        <div class="no">02 / 2026</div>
-        <h3>AI 助力瓯塑：基于机器学习的配色辅助系统设计与实现</h3>
-        <p>为国家级非遗「瓯塑」做一套配色建议工具 —— 先读懂传统配色，再让模型学会推荐。</p>
-        <div class="foot"><span class="tag">机器学习 · 设计</span><span class="tag year">2026</span></div>
-      </article>
+      <div class="cat">
+        <h4>人工智能与交互<i>06</i></h4>
+        <ul>
+          <li><span class="wt">看见划桨<em>一条会回应动作的龙舟</em></span><span class="wr"><span class="wy">2024</span><a class="gj" href="#case-dragon">图集</a></span></li>
+          <li><span class="wt">没人按快门的地方<em>无人摄影的三种场景</em></span><span class="wr"><span class="wy">2025</span><a class="gj" href="#case-shutter">图集</a></span></li>
+          <li><span class="wt">屏幕里的人<em>数字人的设计与实现</em></span><span class="wr"><span class="wy">2026</span></span></li>
+          <li><span class="wt">灯影之间<em>当人工智能遇上皮影戏</em></span><span class="wr"><span class="wy">2026</span></span></li>
+          <li><span class="wt">光随形动<em>基于人体动作识别的灯光交互系统</em></span><span class="wr"><span class="wy">2024</span></span></li>
+          <li><span class="wt">当 AI 读作文<em>基于大模型的自助作文批阅系统</em></span><span class="wr"><span class="wy">2025</span></span></li>
+        </ul>
+      </div>
 
-      <article class="card rv" data-cat="ai">
-        <div class="no">03 / 2026</div>
-        <h3>当人工智能遇上皮影戏</h3>
-        <p>把 AI 放进灯影之间：传统戏曲的身段与生成式技术，能不能同台演一出？</p>
-        <div class="foot"><span class="tag">人工智能 · 交互</span><span class="tag year">2026</span></div>
-      </article>
+      <div class="cat">
+        <h4>设计与研究<i>02</i></h4>
+        <ul>
+          <li><span class="wt">瓯塑的新配色<em>机器学习辅助的非遗配色系统</em></span><span class="wr"><span class="wy">2026</span></span></li>
+          <li><span class="wt">羽毛球研究<em>一篇研究性写作论文</em></span><span class="wr"><span class="wy">2023</span></span></li>
+        </ul>
+      </div>
 
-      <article class="card rv" data-cat="club">
-        <div class="no">04 / 2025</div>
-        <h3>温科高 AI4S 赛题研讨【学生活动】</h3>
-        <p>AI for Science 方向的赛题拆解与学生分工表，是学校科学智能选题的底稿。</p>
-        <div class="foot"><span class="tag">社团 · 活动</span><span class="tag year">2025</span></div>
-      </article>
-
-      <article class="card rv" data-cat="club">
-        <div class="no">05 / 2025</div>
-        <h3>AI + 游戏设计社团的作品清单</h3>
-        <p>社团作品索引：从一张设计稿，到一个能上手玩的原型，中间隔了什么。</p>
-        <div class="foot"><span class="tag">社团 · 活动</span><span class="tag year">2025</span></div>
-      </article>
-
-      <article class="card rv" data-cat="make">
-        <div class="no">06 / 2025</div>
-        <h3><a href="#case-guide">科创中心入门指南</a></h3>
-        <p>新成员的第一份手册：xTool 激光雕刻与 3D 打印的安全规范、软件界面与完整操作链路。</p>
-        <div class="foot"><span class="tag">制造 · 工程实践</span><span class="tag year">2025</span><span class="tag pic">图文</span></div>
-      </article>
-
-      <article class="card rv" data-cat="make">
-        <div class="no">07 / 2026</div>
-        <h3><a href="#case-3dp">25 3D 打印原理</a></h3>
-        <p>从模型摆正到切片生成：为什么悬空的地方必须加支撑，参数又如何决定成败。</p>
-        <div class="foot"><span class="tag">制造 · 工程实践</span><span class="tag year">2026</span><span class="tag pic">图文</span></div>
-      </article>
-
-      <article class="card rv" data-cat="hw">
-        <div class="no">08 / 2025</div>
-        <h3><a href="#case-servo">什么样的舵机能够转？</a></h3>
-        <p>用一颗 DC3V–6V 减速电机，把"能转"拆成接线、供电、控制三件事。</p>
-        <div class="foot"><span class="tag">智能硬件 · 机器人</span><span class="tag year">2025</span><span class="tag pic">图文</span></div>
-      </article>
-
-      <article class="card rv" data-cat="ai">
-        <div class="no">09 / 2024</div>
-        <h3><a href="#case-dragon">RNN + 关键点检测：打造龙舟互动体验装置</a></h3>
-        <p>识别划桨动作、判定动作阶段、驱动实体龙舟 —— 数据集、模型、物联网、船体全链路。</p>
-        <div class="foot"><span class="tag">人工智能 · 交互</span><span class="tag year">2024</span><span class="tag pic">图文</span></div>
-      </article>
-
-      <article class="card rv" data-cat="hw">
-        <div class="no">10 / 2024</div>
-        <h3>健康饮水伴侣</h3>
-        <p>把「多喝水」这句话做成一个有行为的硬件。文档按论文结构写：研究背景、研究目的、项目规划、实现思路、使用方法。</p>
-        <div class="foot"><span class="tag">智能硬件 · 机器人</span><span class="tag year">2024</span></div>
-      </article>
-
-      <article class="card rv" data-cat="ai">
-        <div class="no">11 / 2025</div>
-        <h3><a href="#case-scene">景点无人摄影服务系统的设计</a></h3>
-        <p>无人值守的摄影服务：景点、校园、证件照三种场景，各自怎么启动、怎么摄制、怎么交付。</p>
-        <div class="foot"><span class="tag">人工智能 · 交互</span><span class="tag year">2025</span><span class="tag pic">图文</span></div>
-      </article>
-
-      <article class="card rv" data-cat="ml">
-        <div class="no">12 / 2023</div>
-        <h3>论文：羽毛球研究</h3>
-        <p>以羽毛球为对象的学术写作实践，展示从提出问题到成文的完整研究流程。</p>
-        <div class="foot"><span class="tag">机器学习 · 设计</span><span class="tag year">2023</span></div>
-      </article>
-
-      <article class="card rv" data-cat="hw">
-        <div class="no">13 / 2024</div>
-        <h3><a href="#case-farm">科创馆前智慧农场灌溉项目开发日志</a></h3>
-        <p>一块真实农田的开发日志：土壤湿度、水分、温度三路传感，加一台控制水泵的执行机构。</p>
-        <div class="foot"><span class="tag">智能硬件 · 机器人</span><span class="tag year">2024</span><span class="tag pic">图文</span></div>
-      </article>
-
-      <article class="card rv" data-cat="ai">
-        <div class="no">14 / 2024</div>
-        <h3>【光随形动】：基于人体动作识别的灯光交互系统</h3>
-        <p>人动，光跟着变形。用姿态识别把身体变成一件乐器。</p>
-        <div class="foot"><span class="tag">人工智能 · 交互</span><span class="tag year">2024</span></div>
-      </article>
-
-      <article class="card rv" data-cat="ml">
-        <div class="no">15 / 2025</div>
-        <h3>基于大模型的自助作文批阅系统的设计与开发</h3>
-        <p>让大模型给学生作文写批阅反馈。难点不在调用接口，而在提示词怎么写、评分口径怎么定。</p>
-        <div class="foot"><span class="tag">机器学习 · 设计</span><span class="tag year">2025</span></div>
-      </article>
-
-      <article class="card rv" data-cat="hw">
-        <div class="no">16 / 2025</div>
-        <h3>基于树莓派的自主式白板清洁机器人系统设计</h3>
-        <p>正式题目是「基于树莓派与 ROS2 的教育型磁吸爬壁清洁机器人」—— 让它吸附在竖直白板上，自己爬、自己擦。</p>
-        <div class="foot"><span class="tag">智能硬件 · 机器人</span><span class="tag year">2025</span></div>
-      </article>
-
-      <article class="card rv" data-cat="make">
-        <div class="no">17 / 2025</div>
-        <h3><a href="#case-specimen">电子标本制作</a></h3>
-        <p>把旧手机、掌机、显卡一件件拆开，做成博物馆式的「标本图」：每个零件都有自己的位置和名字。</p>
-        <div class="foot"><span class="tag">制造 · 工程实践</span><span class="tag year">2025</span><span class="tag pic">图文</span></div>
-      </article>
+      <div class="cat">
+        <h4>社团与活动<i>02</i></h4>
+        <ul>
+          <li><span class="wt">先问对问题<em>AI for Science 赛题研讨与分工</em></span><span class="wr"><span class="wy">2025</span></span></li>
+          <li><span class="wt">能玩的原型<em>AI + 游戏设计社团作品集</em></span><span class="wr"><span class="wy">2025</span></span></li>
+        </ul>
+      </div>
 
     </div>
   </div>
 </section>
 
-<!-- ================= 深度案例 ================= -->
+<!-- ================= 作品章节 ================= -->
 <section class="sec" id="cases">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="kicker">过程图集</div>
-      <h2>七份文档里的现场</h2>
-      <p class="lede">以下七件作品在腾讯文档里保留了过程照片与图纸。点击任意图片可放大查看 —— 里面既有写得很整齐的论文，也有拍到一半忘了擦镜头的现场。</p>
+      <div class="kicker">图集</div>
+      <h2>七件作品的过程现场</h2>
+      <p class="lede">这七件留下了完整的操作照片、切片预览与图纸 —— 里面既有写得很整齐的流程，也有拍到一半忘了擦镜头的现场。点击任意图片可放大。</p>
     </div>
 
-    <!-- 案例一：科创中心入门指南 -->
-    <article class="case rv" id="case-guide">
+    <!-- 01 让它转起来 -->
+    <article class="case rv" id="case-motor">
       <div class="case-head">
-        <div class="case-no">06</div>
+        <div class="case-no">01</div>
         <div>
-          <h3>科创中心入门指南</h3>
-          <p class="case-desc">一份写给"第一次进科创中心的人"的手册。它不解释激光的原理，而是把开机的每一步、以及会造成事故的每一个动作，先讲清楚：设备怎么摆、排烟管怎么接、图纸怎么放进 xTool Creative Space、速度与雕刻密度给多少。</p>
-          <div class="case-meta"><span class="tag">制造 · 工程实践</span><span class="tag year">2025</span><span class="tag">设备：xTool 激光雕刻机 · 3D 打印机</span></div>
+          <h3>让它转起来</h3>
+          <p class="sub">从一颗减速电机开始</p>
+          <div class="case-meta"><span class="tag">智能硬件</span><span class="tag year">2025</span><span class="tag pic">器件：DC3V–6V · Arduino</span></div>
         </div>
       </div>
-      <div class="gal five">
-        <figure class="shot">
-          <img src="assets/guide-laser.jpg" alt="xTool 激光雕刻机设备" loading="lazy">
-          <figcaption>设备本体：盖板未闭合时不会出光，第一步是把安全边界记住</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="assets/guide-canvas.jpg" class="contain" alt="激光雕刻软件画布与刀条平面加工" loading="lazy">
-          <figcaption>在软件里把图纸摆进画布，并选择「刀条平面加工」模式</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="assets/guide-param.jpg" class="contain" alt="激光雕刻参数面板：速度300mm每秒、灰度模式、雕刻密度100" loading="lazy">
-          <figcaption>参数面板：速度 300 mm/s、加工次数 1、图像模式灰度、雕刻密度 100、双向扫描</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="assets/guide-device.jpg" alt="激光切割设备与排风" loading="lazy">
-          <figcaption>开机前的准备：排烟管接到窗外，材料放平</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="assets/guide-dust.jpg" alt="排烟管道与激光切割出的小木件" loading="lazy">
-          <figcaption>切下来的小件：一次成功的打样，往往要试好几版参数</figcaption>
-        </figure>
-      </div>
-      <div class="case-note"><b>为什么把它放进作品集：</b>它是整个科创中心的"入口"。后面所有的作品，都建立在有人先把这台机器安全地教会给别人之上。</div>
-    </article>
-
-    <!-- 案例二：3D打印原理 -->
-    <article class="case rv" id="case-3dp">
-      <div class="case-head">
-        <div class="case-no">07</div>
-        <div>
-          <h3>25 3D 打印原理</h3>
-          <p class="case-desc">3D 打印最容易失败的地方，往往不是打印机，而是"没加支撑"。这份文档用切片软件里的预览一帧帧说明：模型悬空的部分为什么会塌、支撑生成在哪些位置、层厚与填充如何影响一件作品的成败与耗时。</p>
-          <div class="case-meta"><span class="tag">制造 · 工程实践</span><span class="tag year">2026</span><span class="tag">工具：切片软件 · FDM 打印机</span></div>
-        </div>
-      </div>
-      <div class="gal">
-        <figure class="shot">
-          <img src="assets/tp-model.png" class="contain" alt="绿色切片预览：人物模型的分层路径" loading="lazy">
-          <figcaption>切片预览：一层层堆叠的路径，就是打印机的「施工图」</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="assets/tp-support.png" class="contain" alt="切片预览：模型旁生成柱状支撑" loading="lazy">
-          <figcaption>支撑生成：悬空的裙摆与手臂下方，长出了一片「脚手架」</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="assets/tp-build.jpg" class="contain" alt="支撑结构教学示意图" loading="lazy">
-          <figcaption>拆解给初学者看：支撑长什么样、为什么这样长</figcaption>
-        </figure>
-      </div>
-      <div class="case-note"><b>为什么把它放进作品集：</b>它教会学生一件事 —— 3D 打印不是"按一下就好"，而是一连串可以被观察、被验证的判断。</div>
-    </article>
-
-    <!-- 案例三：舵机 -->
-    <article class="case rv" id="case-servo">
-      <div class="case-head">
-        <div class="case-no">08</div>
-        <div>
-          <h3>什么样的舵机能够转？</h3>
-          <p class="case-desc">一个看起来"太简单"的题目。而它的价值恰恰在于简单：把电机、电压、驱动、信号线这些名词，落到一颗能用手摸到的 DC3V–6V 减速电机上，确认它转起来的那一秒，学生才真的拥有了它。</p>
-          <div class="case-meta"><span class="tag">智能硬件 · 机器人</span><span class="tag year">2025</span><span class="tag">器件：DC3V–6V 直流减速电机 · Arduino</span></div>
-        </div>
+      <div class="case-body">
+        <p>所有课程的第一个练习，都是把一个东西弄转。不是机器人，不是小车，只是一颗三厘米见方的减速电机。</p>
+        <p>学生要在文档里回答三个问题：线接哪儿、电给多少、怎么让它听指令。三个都答对了，它才会转 —— 而那一声嗡响，比任何一张电路图都更能解释什么叫「驱动」。</p>
       </div>
       <div class="case-split">
         <figure class="shot">
           <img src="assets/servo.jpg" class="contain" alt="DC3V-6V 直流减速电机，适用 Arduino" loading="lazy">
-          <figcaption>器件规格：DC3V–6V 直流减速电机，适用 Arduino</figcaption>
+          <figcaption>DC3V–6V 直流减速电机｜适用 Arduino</figcaption>
         </figure>
         <div class="qa">
           <div>
             <b>① 线怎么接</b>
-            <span>红黑两根是电源与地。接反了不转，接对了也只是"能通电"，还不是"能听话"。</span>
+            <span>红黑两根是电源与地。接反了不转，接对了也只是「能通电」，还不是「能听话」。</span>
           </div>
           <div>
             <b>② 电给多少</b>
-            <span>DC3V–6V 是它的舒适区。3V 转得斯文，6V 转得利落；电压不足只是嗡嗡响。</span>
+            <span>DC3V–6V 是它的舒适区。3V 转得斯文，6V 转得利落；电压不足只会嗡嗡响。</span>
           </div>
           <div>
             <b>③ 怎么控制</b>
@@ -568,99 +428,101 @@
           </div>
         </div>
       </div>
-      <div class="case-note"><b>为什么把它放进作品集：</b>所有复杂的机器人，都是从"让一个东西转起来"开始的。这是第一课。</div>
     </article>
 
-    <!-- 案例四：龙舟 -->
-    <article class="case rv" id="case-dragon">
+    <!-- 02 开机之前 -->
+    <article class="case rv" id="case-open">
       <div class="case-head">
-        <div class="case-no">09</div>
+        <div class="case-no">02</div>
         <div>
-          <h3>RNN + 关键点检测：打造龙舟互动体验装置</h3>
-          <p class="case-desc">这是这批作品里工程量最大的一件。学生自己拍摄、标注了 30 组划桨动作样本，用关键点检测提取人体骨架，再用循环神经网络判断动作处于哪个阶段，通过物联网把指令发给实体龙舟 —— 最后还得把船体做出来。</p>
-          <div class="case-meta"><span class="tag">人工智能 · 交互</span><span class="tag year">2024</span><span class="tag">技术：关键点检测 · RNN · 物联网 · 船体制作</span></div>
+          <h3>开机之前</h3>
+          <p class="sub">科创中心设备的第一课</p>
+          <div class="case-meta"><span class="tag">制造与工程</span><span class="tag year">2025</span><span class="tag pic">xTool 激光雕刻 · 3D 打印</span></div>
         </div>
       </div>
-      <div class="gal two">
-        <figure class="shot">
-          <img src="assets/dragon-data.png" class="contain" alt="划桨动作关键点数据集，Stop_1 到 Stop_30 的样本预览" loading="lazy">
-          <figcaption>数据集：Stop_1—Stop_30，每一个文件夹都是一段自己拍的划桨动作</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="assets/dragon-flow.png" class="contain" alt="龙舟装置系统流程与实现思路" loading="lazy">
-          <figcaption>实现思路：数据采集 → 模型训练 → 推理 → 物联网 → 龙舟控制</figcaption>
-        </figure>
-      </div>
-      <div class="case-note"><b>为什么把它放进作品集：</b>它把「AI 模型」和「一条船」连在了一起。模型不是终点，让船动起来才是。</div>
-    </article>
-
-    <!-- 案例五：景点无人摄影 -->
-    <article class="case rv" id="case-scene">
-      <div class="case-head">
-        <div class="case-no">11</div>
-        <div>
-          <h3>景点无人摄影服务系统的设计</h3>
-          <p class="case-desc">一个没人守着的摄影点，怎么服务三种完全不同的人？景点游客要靠扫码自己唤醒系统；校园里学生不能用手机，于是改成距离传感器或物理按钮触发；拍证件照的人不知道怎么站，就让 AI 开口提示，免得歪头歪肩。同一个系统，三套启动逻辑。</p>
-          <div class="case-meta"><span class="tag">人工智能 · 交互</span><span class="tag year">2025</span><span class="tag">环节：启动 · 摄制 · 后续</span></div>
-        </div>
-      </div>
-      <div class="gal" style="grid-template-columns:1fr">
-        <figure class="shot" style="aspect-ratio:16/9">
-          <img src="assets/scene-flow.png" class="contain" alt="不同场景工作流程：景点、校园、证件照三种场景的启动、摄制与后续安排" loading="lazy">
-          <figcaption>三种场景 × 三个环节：启动方式、摄制引导、照片如何交付</figcaption>
-        </figure>
-      </div>
-      <div class="case-note"><b>为什么把它放进作品集：</b>它证明了一件事 —— 做产品最难的不是技术，而是想清楚「没有手机的人怎么办」。</div>
-    </article>
-
-    <!-- 案例六：智慧农场 -->
-    <article class="case rv" id="case-farm">
-      <div class="case-head">
-        <div class="case-no">13</div>
-        <div>
-          <h3>科创馆前智慧农场灌溉项目开发日志</h3>
-          <p class="case-desc">这是全部作品里最「土」的一件：传感器要真的插进土里，水管要真的接到水龙头上，控制箱还得扛得住下雨。文档写得很实在 —— 元件怎么选、接线分几步、出了问题从哪儿查起，最后才是界面。</p>
-          <div class="case-meta"><span class="tag">智能硬件 · 机器人</span><span class="tag year">2024</span><span class="tag">传感：土壤湿度 · 水分 · 温度</span></div>
-        </div>
+      <div class="case-body">
+        <p>科创中心最贵的设备不教人，它只等人犯错。所以第一份文档不写原理，只写流程：机器怎么摆、排烟管接去哪儿、图纸怎么放进画布、速度和雕刻密度给到多少。</p>
+        <p>写这份手册的人，是自己先踩过坑的 —— 参数试了好几版，木板切废了好几块，才攒下这几张能当教程用的照片。</p>
       </div>
       <div class="gal">
-        <figure class="shot plain">
-          <img src="assets/farm-soil.png" alt="土壤湿度传感器 SEN0114" loading="lazy">
-          <figcaption>土壤湿度传感器（SEN0114）：缺水时输出值减小</figcaption>
-        </figure>
-        <figure class="shot plain">
-          <img src="assets/farm-water.png" alt="水分传感器 SEN0121" loading="lazy">
-          <figcaption>水分传感器（SEN0121）：检测雨水、雾水、水蒸气</figcaption>
-        </figure>
-        <figure class="shot plain">
-          <img src="assets/farm-temp.png" alt="DS18B20 温度传感器" loading="lazy">
-          <figcaption>DS18B20 温度传感器：量程 −55～+125 ℃</figcaption>
+        <figure class="shot">
+          <img src="assets/guide-laser.jpg" alt="xTool 激光雕刻机设备" loading="lazy">
+          <figcaption>设备本体：盖板未闭合时不会出光 —— 第一步是把安全边界记住</figcaption>
         </figure>
         <figure class="shot">
-          <img src="assets/farm-box.jpg" alt="防水控制箱内部：主控板、继电器与各路线束" loading="lazy">
-          <figcaption>防水控制箱内部：主控、继电器与各路线束</figcaption>
+          <img src="assets/guide-canvas.jpg" class="contain" alt="激光雕刻软件画布，选择刀条平面加工" loading="lazy">
+          <figcaption>在软件里把图纸摆进画布，选择「刀条平面加工」</figcaption>
         </figure>
         <figure class="shot">
-          <img src="assets/farm-install.jpg" alt="现场施工：从水龙头分出灌溉管路" loading="lazy">
-          <figcaption>现场施工：从水龙头分出灌溉管路，接口得缠好生料带</figcaption>
+          <img src="assets/guide-param.jpg" class="contain" alt="激光雕刻参数面板：速度300毫米每秒、灰度模式、雕刻密度100" loading="lazy">
+          <figcaption>参数面板：速度 300 mm/s、灰度、雕刻密度 100、双向扫描</figcaption>
         </figure>
         <figure class="shot">
-          <img src="assets/farm-field.jpg" alt="木制种植槽与电控箱直接摆在草地上" loading="lazy">
-          <figcaption>种植槽与电控箱，直接摆在草地上 —— 这就是真实场地的样子</figcaption>
+          <img src="assets/guide-sample.jpg" alt="雕刻打样：多块木板与一张人物图在画布中" loading="lazy">
+          <figcaption>打样：同一个文件在几块板上跑，才知道参数对不对</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/guide-device.jpg" alt="激光切割设备与排风" loading="lazy">
+          <figcaption>开机前的准备：排烟管接到窗外，材料放平</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/guide-dust.jpg" alt="排烟管道与激光切割出的小木件" loading="lazy">
+          <figcaption>切下来的小件 —— 一次成功的打样，往往要试好几版</figcaption>
         </figure>
       </div>
-      <div class="case-note"><b>为什么把它放进作品集：</b>因为它没有"实验室感"。电线是乱的，草地是黄的，但它在真的长东西。</div>
     </article>
 
-    <!-- 案例七：电子标本 -->
-    <article class="case rv" id="case-specimen">
+    <!-- 03 悬空之处 -->
+    <article class="case rv" id="case-overhang">
       <div class="case-head">
-        <div class="case-no">17</div>
+        <div class="case-no">03</div>
         <div>
-          <h3>电子标本制作</h3>
-          <p class="case-desc">它不是「数字化」，是「拆开来看」。把一件电子产品拆到零件级，再按原来的位置重新排列、逐件标注 —— 这是最古老的博物学方法，被用在了最新的东西上。从旧手机到掌机再到显卡，拆的过程本身就是一次结构课。</p>
-          <div class="case-meta"><span class="tag">制造 · 工程实践</span><span class="tag year">2025</span><span class="tag">方法：拆解 · 排布 · 标注</span></div>
+          <h3>悬空之处</h3>
+          <p class="sub">3D 打印的切片与支撑</p>
+          <div class="case-meta"><span class="tag">制造与工程</span><span class="tag year">2026</span><span class="tag pic">切片软件 · FDM 打印</span></div>
         </div>
+      </div>
+      <div class="case-body">
+        <p>3D 打印最容易失败的地方，往往不在打印机，而在「没加支撑」。模型悬空的裙摆、抬起的胳膊，只要底下没有承托，喷头就会把材料挤在空气里。</p>
+        <p>这份文档用切片预览一帧帧拆开：支撑长在哪儿、为什么长在那儿、层厚和填充改掉之后预览里会变成什么样。看得见的原因，才是能被修正的原因。</p>
+      </div>
+      <div class="gal five">
+        <figure class="shot">
+          <img src="assets/tp-preview1.png" class="contain" alt="切片预览：人像模型下方的柱状支撑" loading="lazy">
+          <figcaption>支撑生成：悬空的下方，长出一片「脚手架」</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/tp-model.png" class="contain" alt="绿色切片预览：人物模型的分层路径" loading="lazy">
+          <figcaption>一层层堆叠的路径，就是打印机的「施工图」</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/tp-support.png" class="contain" alt="切片预览：模型旁生成支撑" loading="lazy">
+          <figcaption>换个角度看：支撑把悬空处托到了平台上</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/tp-build.jpg" class="contain" alt="支撑结构教学示意" loading="lazy">
+          <figcaption>拆给初学者看：支撑长什么样、为什么这样长</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/tp-preview2.png" class="contain" alt="切片预览含换料次数与时间预估面板" loading="lazy">
+          <figcaption>预览旁边挂着换料次数与时间预估 —— 参数就是成本</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- 04 拆开，再摆回去 -->
+    <article class="case rv" id="case-teardown">
+      <div class="case-head">
+        <div class="case-no">04</div>
+        <div>
+          <h3>拆开，再摆回去</h3>
+          <p class="sub">电子标本的零件图谱</p>
+          <div class="case-meta"><span class="tag">制造与工程</span><span class="tag year">2025</span><span class="tag pic">拆解 · 排布 · 标注</span></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <p>把一件电子产品拆到零件级，再按原来的位置重新排列、逐件标注 —— 这是最古老的博物学方法，被用在了最新的东西上。</p>
+        <p>拆的过程会上很多课：多出来的一颗螺丝、绕远的一条排线、一块看不出功能的金属片。它们提醒你，工程师也在权衡，而权衡是有痕迹的。</p>
       </div>
       <div class="gal">
         <figure class="shot">
@@ -669,15 +531,115 @@
         </figure>
         <figure class="shot">
           <img src="assets/spec-3ds.png" class="contain" alt="掌机 3DS 拆解标本图" loading="lazy">
-          <figcaption>掌机 3DS 的标本图：先拆到底，再一件件摆回去</figcaption>
+          <figcaption>掌机 3DS：先拆到底，再一件件摆回去</figcaption>
         </figure>
         <figure class="shot">
           <img src="assets/spec-gpu.jpg" alt="显卡拆解后平铺：风扇、散热鳍片、PCB 与背板" loading="lazy">
           <figcaption>显卡拆开平铺：风扇、散热鳍片、PCB、背板，一层一层</figcaption>
         </figure>
       </div>
-      <div class="case-note"><b>为什么把它放进作品集：</b>拆解是最便宜的研究方法，也是最诚实的一种 —— 不拆开，你永远不知道里面是怎么装的。</div>
     </article>
+
+    <!-- 05 草地上的农田 -->
+    <article class="case rv" id="case-field">
+      <div class="case-head">
+        <div class="case-no">05</div>
+        <div>
+          <h3>草地上的农田</h3>
+          <p class="sub">一套会看土的灌溉系统</p>
+          <div class="case-meta"><span class="tag">智能硬件</span><span class="tag year">2024</span><span class="tag pic">土壤湿度 · 水分 · 温度 · 光照</span></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <p>科创馆门口那块地是真实的：土是干的，草是黄的，水龙头在墙根，设备要防雨。系统要回答的问题却很朴素 —— 土够不够湿、天会不会下雨、温度对不对、太阳晒不晒。</p>
+        <p>四路传感器，一台控制水泵的执行机构，一条能把数据送出去的链路。文档里写得最细的不是结论，而是排查：读数不对，先看哪一根线。</p>
+      </div>
+      <div class="gal four">
+        <figure class="shot plain">
+          <img src="assets/farm-soil.png" alt="土壤湿度传感器 SEN0114" loading="lazy">
+          <figcaption>土壤湿度传感器 SEN0114｜缺水时输出值减小</figcaption>
+        </figure>
+        <figure class="shot plain">
+          <img src="assets/farm-water.png" alt="水分传感器 SEN0121" loading="lazy">
+          <figcaption>水分传感器 SEN0121｜雨雾水汽都能感知</figcaption>
+        </figure>
+        <figure class="shot plain">
+          <img src="assets/farm-temp.png" alt="DS18B20 温度传感器" loading="lazy">
+          <figcaption>DS18B20 温度传感器｜量程 −55～+125 ℃</figcaption>
+        </figure>
+        <figure class="shot plain">
+          <img src="assets/farm-light.png" alt="模拟环境光线传感器 DFR0026" loading="lazy">
+          <figcaption>模拟环境光线传感器 DFR0026｜测量环境光强度</figcaption>
+        </figure>
+      </div>
+      <div class="gal two" style="margin-top:14px">
+        <figure class="shot">
+          <img src="assets/farm-box2.jpg" alt="防水控制箱内部：主控板、继电器与线束" loading="lazy">
+          <figcaption>控制箱内部：主控、继电器、各路传感器线束</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/farm-box.jpg" alt="防水控制箱外观与内部布局" loading="lazy">
+          <figcaption>换个角度看：箱体密封与走线，是要能淋雨的</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/farm-pipe.jpg" alt="墙根水龙头接出的灌溉管路" loading="lazy">
+          <figcaption>现场施工：从墙根的水龙头分出灌溉管路</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/farm-plot.jpg" alt="木制种植槽、插入土壤的传感器与地面控制箱" loading="lazy">
+          <figcaption>种植槽与传感器，探头直接插进土里 —— 真实场地就是这样</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- 06 看见划桨 -->
+    <article class="case rv" id="case-dragon">
+      <div class="case-head">
+        <div class="case-no">06</div>
+        <div>
+          <h3>看见划桨</h3>
+          <p class="sub">一条会回应动作的龙舟</p>
+          <div class="case-meta"><span class="tag">人工智能与交互</span><span class="tag year">2024</span><span class="tag pic">关键点检测 · RNN · 物联网</span></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <p>这是七组里工程量最大的一件。学生自己拍摄、标注了三十组划桨样本，用关键点检测把人体骨架抽出来，再用循环神经网络判断动作走到哪一步，最后通过物联网把指令发给实体龙舟。</p>
+        <p>模型只是中间站。船要动，还得有人去做船体、装内件、调通信 —— 一条龙舟，把一个模型训练项目拉成了完整的工程。</p>
+      </div>
+      <div class="gal two">
+        <figure class="shot">
+          <img src="assets/dragon-data.png" class="contain" alt="划桨动作关键点数据集，Stop_1 到 Stop_30 的样本预览" loading="lazy">
+          <figcaption>数据集：Stop_1—Stop_30，每一格都是一段自己拍的划桨动作</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/dragon-flow.png" class="contain" alt="龙舟装置系统流程与实现思路" loading="lazy">
+          <figcaption>链路：数据采集 → 模型训练 → 推理 → 物联网 → 龙舟控制</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- 07 没人按快门的地方 -->
+    <article class="case rv" id="case-shutter">
+      <div class="case-head">
+        <div class="case-no">07</div>
+        <div>
+          <h3>没人按快门的地方</h3>
+          <p class="sub">无人摄影的三种场景</p>
+          <div class="case-meta"><span class="tag">人工智能与交互</span><span class="tag year">2025</span><span class="tag pic">启动 · 摄制 · 交付</span></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <p>一个没人守着的摄影点，要同时服务三种完全不同的人。景点游客得靠扫码自己唤醒系统；校园里学生不能用手机，于是改成距离传感器，或者就一个物理按钮；拍证件照的人不知道怎么站，就让 AI 开口提示，免得歪头歪肩。</p>
+        <p>同一个系统，三套启动逻辑。做产品最难的地方，从来不是技术，而是「没有手机的人怎么办」。</p>
+      </div>
+      <div class="gal one">
+        <figure class="shot plain natural">
+          <img src="assets/scene-flow.png" class="contain" alt="不同场景工作流程：景点、校园、证件照三种场景的启动、摄制与后续安排" loading="lazy">
+          <figcaption>三种场景 × 三个环节：怎么启动、怎么引导、照片怎么交到人手上</figcaption>
+        </figure>
+      </div>
+    </article>
+
   </div>
 </section>
 
@@ -687,10 +649,10 @@
     <div class="sec-head rv">
       <div class="kicker">一条共同的路径</div>
       <h2>他们是怎么做出来的</h2>
-      <p class="lede">把 17 份文档摊开，会发现流程惊人地一致。它不高级，但足够真实 —— 也正是我们希望学生带走的东西。</p>
+      <p class="lede">把这十七件摊开，会发现流程惊人地一致。它不高级，但足够真实 —— 也正是我们希望学生带走的东西。</p>
     </div>
     <div class="steps rv">
-      <div class="step"><i>STEP 01</i><b>先让它转起来</b><span>不急着讲原理。设备通电、模型跑通，先拿到一次成功。</span></div>
+      <div class="step"><i>STEP 01</i><b>先让它动起来</b><span>不急着讲原理。设备通电、模型跑通，先拿到一次成功。</span></div>
       <div class="step"><i>STEP 02</i><b>把它记下来</b><span>参数、坑、失败的那几版，都写进文档。文档是给下一个人看的。</span></div>
       <div class="step"><i>STEP 03</i><b>接到真实场景</b><span>瓯塑的配色、教室的白板、田里的灌溉 —— 问题来自生活，不是题库。</span></div>
       <div class="step"><i>STEP 04</i><b>讲给别人听</b><span>公开课、社团分享、峰会现场。能讲清楚，才算真的懂了。</span></div>
@@ -722,33 +684,18 @@
 <footer>
   <div class="wrap">
     <div>温州科技高级中学 · 学生科创作品集 · 2026 世界青年科学家峰会 万有引力π · 青年 TALK 专场</div>
-    <div>页面内容整理自校内腾讯文档；部分原文需授权访问，此处仅呈现标题与已获授权内容。</div>
+    <div>本页收录校内科创项目十七件，其中七件附完整过程图集。</div>
   </div>
 </footer>
 
 <!-- 灯箱 -->
 <div class="lb" id="lb">
-  <img src="" alt="">
+  <img alt="">
   <span></span>
 </div>
 
 <script>
 (function(){
-  // 分类筛选
-  var btns = document.querySelectorAll('#filters button');
-  var cards = document.querySelectorAll('#grid .card');
-  btns.forEach(function(b){
-    b.addEventListener('click', function(){
-      btns.forEach(function(x){ x.classList.remove('on'); });
-      b.classList.add('on');
-      var f = b.dataset.f;
-      cards.forEach(function(c){
-        c.hidden = !(f === 'all' || c.dataset.cat === f);
-      });
-    });
-  });
-
-  // 灯箱
   var lb = document.getElementById('lb');
   var lbImg = lb.querySelector('img');
   var lbCap = lb.querySelector('span');
@@ -762,10 +709,10 @@
       lb.classList.add('on');
     });
   });
-  lb.addEventListener('click', function(){ lb.classList.remove('on'); lbImg.src=''; });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') lb.classList.remove('on'); });
+  function closeLb(){ lb.classList.remove('on'); lbImg.removeAttribute('src'); }
+  lb.addEventListener('click', closeLb);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLb(); });
 
-  // 滚动入场
   if('IntersectionObserver' in window){
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(en){
