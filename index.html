@@ -266,6 +266,29 @@
   .step b{display:block;margin:10px 0 8px;font-size:16px;font-weight:700}
   .step span{font-size:13.5px;color:var(--muted);line-height:1.7}
 
+  /* ============ 评委 ============ */
+  .jury{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .judge{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+  .judge .jph{position:relative;aspect-ratio:4/5;background:var(--mist);overflow:hidden}
+  .judge .jph img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.3,1)}
+  .judge:hover .jph img{transform:scale(1.035)}
+  .judge .no{
+    position:absolute;top:13px;left:13px;z-index:2;
+    font-family:var(--serif);font-size:12px;letter-spacing:.16em;color:#fff;
+    background:rgba(4,18,47,.5);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+    padding:4px 9px;border-radius:6px;
+  }
+  .judge .jb{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+  .judge h3{margin:0;font-size:20px;font-weight:800;letter-spacing:.08em;line-height:1.3}
+  .judge .role{margin:9px 0 16px;font-size:13.5px;line-height:1.72;color:var(--muted)}
+  .judge .role span{display:block}
+  .judge .tag{
+    align-self:flex-start;margin-top:auto;
+    font-size:12px;letter-spacing:.06em;color:var(--blue);
+    background:rgba(26,79,214,.07);padding:4px 11px;border-radius:999px;
+  }
+  .jury-note{margin:26px 0 0;font-size:13px;color:var(--muted);line-height:1.7}
+
   /* ============ CLOSING ============ */
   .closing{
     color:#e9f0ff;position:relative;overflow:hidden;
@@ -312,11 +335,28 @@
     .notes{grid-template-columns:1fr}
     .starts,.asks{grid-template-columns:1fr}
     .pits,.picklist{grid-template-columns:1fr;gap:16px}
+    .jury{grid-template-columns:1fr;gap:18px}
+    .judge{flex-direction:row;align-items:stretch}
+    .judge .jph{flex:0 0 34%;aspect-ratio:auto}
+    .judge .jb{padding:20px 22px}
   }
   @media (max-width:620px){
     .gal,.gal.two,.gal.four,.gal.one{grid-template-columns:1fr}
     .gal.five > .shot:last-child{grid-column:auto;aspect-ratio:4/3}
     .wrap{padding:0 20px}
+    .judge .jph{flex:0 0 38%}
+    .judge h3{font-size:17.5px}
+    .judge .role{font-size:12.5px;line-height:1.65}
+  }
+  @media (max-width:560px){
+    .judge{align-items:flex-start}
+    .judge .jph{flex:0 0 104px;width:104px;height:104px;aspect-ratio:1/1;border-radius:10px;margin:16px 0 16px 16px}
+    .judge .jph img{object-position:center 22%}
+    .judge .no{display:none}
+    .judge .jb{padding:16px 16px 16px 14px}
+    .judge h3{font-size:17px}
+    .judge .role{font-size:12.5px;line-height:1.62;margin:6px 0 10px}
+    .judge .tag{font-size:11px;padding:3px 9px;margin-top:0}
   }
   @media print{
     .hero,.closing{background:#fff!important;color:#000!important}
@@ -898,6 +938,69 @@
       <div class="step"><i>STEP 03</i><b>接到真实场景</b><span>瓯塑的配色、教室的白板、田里的灌溉 —— 问题来自生活，不是题库。</span></div>
       <div class="step"><i>STEP 04</i><b>讲给别人听</b><span>公开课、社团分享、峰会现场。能讲清楚，才算真的懂了。</span></div>
     </div>
+  </div>
+</section>
+
+<!-- ================= 评委 ================= -->
+<section class="sec" id="jury">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">现场点评</div>
+      <h2>三位评委，三种目光</h2>
+      <p class="lede">他们站在三个不同的位置上 —— 高校实验室、产业与赛事、中学课堂。一件作品递到他们手上，会被三种不同的标准打量：测得准不准、用不用得上、孩子自己讲不讲得明白。</p>
+    </div>
+
+    <div class="jury rv">
+      <figure class="judge">
+        <div class="jph">
+          <span class="no">01</span>
+          <img src="assets/judge-hu.jpg" alt="胡岳，上海交通大学电气工程学院高级工程师" style="object-position:40% center">
+        </div>
+        <figcaption class="jb">
+          <h3>胡岳</h3>
+          <div class="role">
+            <span>上海交通大学电气工程学院</span>
+            <span>高级工程师、博士生导师</span>
+            <span>未来电网电力科普教育基地 主任</span>
+          </div>
+          <span class="tag">高校实验室</span>
+        </figcaption>
+      </figure>
+
+      <figure class="judge">
+        <div class="jph">
+          <span class="no">02</span>
+          <img src="assets/judge-zou.jpg" alt="邹宝明，盛通教育研究院副院长">
+        </div>
+        <figcaption class="jb">
+          <h3>邹宝明</h3>
+          <div class="role">
+            <span>盛通教育研究院 副院长</span>
+            <span>世界青年科学家联合会 委员</span>
+            <span>中鸣机器人 CEO</span>
+          </div>
+          <span class="tag">产业与赛事</span>
+        </figcaption>
+      </figure>
+
+      <figure class="judge">
+        <div class="jph">
+          <span class="no">03</span>
+          <img src="assets/judge-wang.jpg" alt="王海涛，上海科技大学附属学校科创教师">
+        </div>
+        <figcaption class="jb">
+          <h3>王海涛</h3>
+          <div class="role">
+            <span>上海科技大学附属学校 科创教师</span>
+            <span>原浦江实验室浦育团队 核心成员</span>
+            <span>商汤科技 高级项目经理</span>
+          </div>
+          <span class="tag">中学课堂</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <p class="jury-note rv">同一天到场的，还有特级教师与新秀教师，以及 AI 企业的一线专家 —— 提问会从讲台来，也会从产线上来。</p>
   </div>
 </section>
 
