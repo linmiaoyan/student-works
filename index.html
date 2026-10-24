@@ -218,6 +218,47 @@
   .note .nk{margin-top:15px;font-size:12px;color:#8b99ae;letter-spacing:.02em}
   .note .nk b{font-weight:600;color:#5c6a7d}
 
+  /* ============ 灵感参考 ============ */
+  .sub-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 0 20px}
+  .sub-h i{font-style:normal;font-family:var(--serif);font-size:12.5px;letter-spacing:.14em;color:#9fb2cc;font-weight:700}
+  .sub-h b{font-size:19.5px;font-weight:800;letter-spacing:-.01em}
+  .sub-h span{font-size:13.5px;color:var(--muted)}
+  .iblock{margin-top:58px}
+  .iblock:first-of-type{margin-top:0}
+
+  .starts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .start{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 26px 22px}
+  .start b{display:block;font-size:16.5px;font-weight:800;margin-bottom:10px;color:var(--navy-2);letter-spacing:-.005em}
+  .start p{margin:0;font-size:14.5px;line-height:1.82;color:#3a4658}
+  .start em{display:block;margin-top:16px;padding-top:12px;border-top:1px solid var(--line);font-style:normal;font-size:12.5px;line-height:1.7;color:#8b99ae}
+
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 24px}
+  .flow b{font-size:14.5px;font-weight:700;background:rgba(26,79,214,.07);color:#22509f;padding:8px 14px;border-radius:8px;white-space:nowrap}
+  .flow u{color:#c3cddd;text-decoration:none;font-size:14px}
+
+  .themes{display:flex;flex-wrap:wrap;gap:8px}
+  .themes span{font-size:13px;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);color:#3a4658;letter-spacing:.01em}
+
+  .picklist{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .picklist div{background:#fff;padding:22px 24px}
+  .picklist b{display:block;font-size:14px;font-weight:700;color:#16202f;margin-bottom:8px}
+  .picklist p{margin:0;font-size:13.5px;line-height:1.78;color:var(--muted)}
+
+  .pits{display:grid;grid-template-columns:1fr 1fr;gap:20px 44px}
+  .pit{padding-left:15px;border-left:2px solid #dbe3f0}
+  .pit b{display:block;font-size:14.5px;font-weight:700;margin-bottom:4px;letter-spacing:-.005em}
+  .pit span{font-size:13.5px;line-height:1.72;color:var(--muted)}
+
+  .asks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .asks div{background:#fff;padding:24px 24px 22px}
+  .asks i{display:block;font-style:normal;font-family:var(--serif);font-size:26px;font-weight:700;color:#c7d2e4;line-height:1;margin-bottom:12px}
+  .asks b{display:block;font-size:14.5px;font-weight:700;margin-bottom:7px;line-height:1.5}
+  .asks span{font-size:13.5px;line-height:1.72;color:var(--muted)}
+
+  .srcnote{margin-top:46px;padding-top:22px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .srcnote a{color:var(--blue);font-weight:600;border-bottom:1px solid rgba(26,79,214,.32);padding-bottom:1px;white-space:nowrap}
+  .srcnote a:hover{color:#0d3796;border-bottom-color:#0d3796}
+
   /* ============ STEPS ============ */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:8px}
   .step{background:#fff;padding:26px 24px}
@@ -269,6 +310,8 @@
     .case-no{font-size:32px}
     .cats{column-count:1}
     .notes{grid-template-columns:1fr}
+    .starts,.asks{grid-template-columns:1fr}
+    .pits,.picklist{grid-template-columns:1fr;gap:16px}
   }
   @media (max-width:620px){
     .gal,.gal.two,.gal.four,.gal.one{grid-template-columns:1fr}
@@ -728,6 +771,116 @@
       </article>
 
     </div>
+  </div>
+</section>
+
+<!-- ================= 灵感参考 ================= -->
+<section class="sec" id="inspire">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">灵感参考</div>
+      <h2>题目从哪儿来</h2>
+      <p class="lede">看完十七件作品，下一个问题是：我的题目在哪儿？这一节整理自《温科高工程实践手册 2026（修订稿）》的「选题」与「实践流程」两章 —— 包括怎么起头、去哪儿找参考，以及九种最容易踩空的开题方式。</p>
+    </div>
+
+    <div class="iblock rv">
+      <div class="sub-h"><i>01</i><b>三条起跑线</b><span>选题至少有三种进入方式</span></div>
+      <div class="starts">
+        <div class="start">
+          <b>AI for Science</b>
+          <p>世界上本来就有规律，只是没被找到。先想一个「为什么」，再想办法把它测出来，最后让机器学习去找规律。</p>
+          <em>例如「为什么咖啡会让人提神」→ 找到能测的量 → 传感器记录 → 用模型找关系</em>
+        </div>
+        <div class="start">
+          <b>功能创新</b>
+          <p>从重复劳动里找一个动作，为它做一件顺手的小工具；或在常见用品上，加一层它原来没有的能力。</p>
+          <em>例如驾驶员瞌睡识别、稻田驱鸟装置、智能菜篮子 —— 注意：这类题查新时容易撞到大量现成案例</em>
+        </div>
+        <div class="start">
+          <b>生活中的摩擦</b>
+          <p>回到你自己被卡住的那一下。手册的做法是先写下「哪些事需要人来帮忙」，至少五条，再一步步收窄。</p>
+          <em>答案的交集，往往就是一个能落地、又不跟人重复的题目</em>
+        </div>
+      </div>
+    </div>
+
+    <div class="iblock rv">
+      <div class="sub-h"><i>02</i><b>一个 AI 项目的四步</b><span>不管题目是什么，都拆成这四段</span></div>
+      <div class="flow">
+        <b>项目主题</b><u>→</u><b>数据采集</b><u>→</u><b>模型训练</b><u>→</u><b>应用部署</b>
+      </div>
+    </div>
+
+    <div class="iblock rv">
+      <div class="sub-h"><i>03</i><b>全球发明大会中国区 · 15 个竞赛主题</b><span>找不到方向时，从这些主题里挑一个切进去</span></div>
+      <div class="themes">
+        <span>无障碍世界</span><span>包容与关爱</span><span>可持续社区</span><span>保护蓝色海洋</span><span>未来学校</span>
+        <span>食品的未来</span><span>零浪费生活</span><span>老年福祉</span><span>水就是一切</span><span>与自然为友</span>
+        <span>共向清洁未来</span><span>传承与弘扬中华文明</span><span>保持安全</span><span>健康的未来</span><span>让乡村生活更美好</span>
+      </div>
+    </div>
+
+    <div class="iblock rv">
+      <div class="sub-h"><i>04</i><b>参考选题库</b><span>从历年赛事里挑出的一小部分，只为说明「题目能有多具体」</span></div>
+      <div class="picklist">
+        <div>
+          <b>智能系统与装备</b>
+          <p>引体向上智能裁判 · 基于 K210 视觉识别的智能安全头盔 · 基于 UWB 技术的上下学接送机器人 · 基于视觉识别的 3D 打印缺陷预警装置</p>
+        </div>
+        <div>
+          <b>生物与环境</b>
+          <p>福鼎蝾螈野外保护情况调查 · 土壤中聚乳酸微塑料积累对水稻幼苗的影响 · 扁秆荆三棱根际耐盐碱细菌的分离鉴定</p>
+        </div>
+        <div>
+          <b>工程设计与创新</b>
+          <p>多功能学生晴雨伞 · 自动趋光晾晒架 · 一种可根据声、光、雨水自动调节开关的窗户 · 锂电池充电安全管理装置</p>
+        </div>
+        <div>
+          <b>健康监测与辅助</b>
+          <p>帕金森专用水杯 · 盲人水位提醒功能不倒水杯 · 理发师职业健康多功能座椅 · 独居老人居家安全监测设备</p>
+        </div>
+        <div>
+          <b>食品与能源</b>
+          <p>无患子提取液自制弹跳泡泡水的探索 · 「水陆两栖」户外便携发电机 · 追光筑电：太阳能利用效率的影响因素</p>
+        </div>
+        <div>
+          <b>AI 识别入门（OpenInnoLab）</b>
+          <p>发芽土豆分拣机 · 驾驶员瞌睡识别 · 坐姿监测提醒器 · 光盘行动智能收碗机 · 校园路口「小交警」</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="iblock rv">
+      <div class="sub-h"><i>05</i><b>选题的九个坑</b><span>这九种开题方式，评审一眼就能看出来</span></div>
+      <div class="pits">
+        <div class="pit"><b>① 带着科幻色彩</b><span>用当前技术根本做不到，短期完全无法实现。如「深海火山的激发与热能利用」。</span></div>
+        <div class="pit"><b>② 缺乏新颖方案</b><span>目标和别人一样，解法也一样。如「人脸识别在校门与食堂的应用研究」。</span></div>
+        <div class="pit"><b>③ 题过大</b><span>范围太广，一个人一学期做不完。如「机器人视觉技术的提升性实现」。</span></div>
+        <div class="pit"><b>④ 题过小</b><span>不具典型性，科技含量不足。如「电脑鼠标的按键弹性对使用者的影响」。</span></div>
+        <div class="pit"><b>⑤ 难度太高</b><span>条件要求过高，非得专业实验室才做得动。如「汽车发动机密封的漏气检测」。</span></div>
+        <div class="pit"><b>⑥ 过于简单</b><span>结果一猜就知道，不需要研究过程。如「不同洗洁精清洗筷子的效果比对」。</span></div>
+        <div class="pit"><b>⑦ 创新点过多</b><span>同时要拿下三个以上突破，每个都不深。如「电动汽车驾驶台的 9 种功能改进」。</span></div>
+        <div class="pit"><b>⑧ 功能硬堆砌</b><span>样样功能本来就有，只是拼在一起。如「具有 12 种功能的手机充电器」。</span></div>
+        <div class="pit"><b>⑨ 纯技术拼装</b><span>把最新的模块凑一堆，却没解决具体问题。如「汇集 5 种新型 AI 技术的耳机」。</span></div>
+        <div class="pit"><b>外加一条：轻易换题</b><span>立项之后还频繁换方向，最后什么都是半成品。选题阶段可以反复推翻，立项之后就别再回头。</span></div>
+      </div>
+    </div>
+
+    <div class="iblock rv">
+      <div class="sub-h"><i>06</i><b>三问思考单</b><span>动笔之前，先把这三题写下来</span></div>
+      <div class="asks">
+        <div><i>01</i><b>你遇到过哪些事，需要「人」来帮忙？</b><span>写出 5 条以上。越具体越好 —— 哪个人、哪个时刻、卡在哪一步。</span></div>
+        <div><i>02</i><b>AI 能帮上忙的方式有哪些？</b><span>写出 3 条以上。识别、分类、检测、预测、生成，各自能对上哪一条。</span></div>
+        <div><i>03</i><b>你现在掌握的技术，能做到哪一部分？</b><span>诚实作答。做不到的部分，就是接下来要补的课 —— 也往往是项目的边界。</span></div>
+      </div>
+      <div class="quote">「找一个问题，想尽办法解决它。」<br>选题阶段允许大量检索、允许反复推翻自己；一旦立项，就沿着同一条线索钻到底。</div>
+    </div>
+
+    <div class="srcnote rv">
+      <div>以上整理自《温科高工程实践手册 2026（修订稿）》第 2 章「选题」与第 4 章「项目实践流程」，示例与评审口径均出自原手册。</div>
+      <a href="https://docs.qq.com/doc/DV1daYXFycndZdWFv" target="_blank" rel="noopener">查看手册原文 →</a>
+    </div>
+
   </div>
 </section>
 
