@@ -206,6 +206,18 @@
   .qa b{display:block;font-size:15px;font-weight:700;margin-bottom:6px;color:var(--navy-2)}
   .qa span{font-size:14px;color:var(--muted);line-height:1.72}
 
+  /* ============ 文字记录 ============ */
+  .notes{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .note{background:#fff;padding:28px 30px 26px;scroll-margin-top:24px;transition:background .3s ease}
+  .note:target{background:#f4f8ff}
+  .note .nh{display:flex;align-items:baseline;justify-content:space-between;gap:14px}
+  .note h3{margin:0;font-size:18px;font-weight:700;letter-spacing:-.005em;line-height:1.5}
+  .note .ny{font-size:12.5px;color:#a6b3c7;font-family:var(--serif);letter-spacing:.06em;white-space:nowrap}
+  .note .ns{display:block;font-size:13.5px;color:var(--muted);margin-top:5px;line-height:1.6}
+  .note p{margin:15px 0 0;font-size:14.5px;line-height:1.82;color:#3a4658}
+  .note .nk{margin-top:15px;font-size:12px;color:#8b99ae;letter-spacing:.02em}
+  .note .nk b{font-weight:600;color:#5c6a7d}
+
   /* ============ STEPS ============ */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:8px}
   .step{background:#fff;padding:26px 24px}
@@ -256,6 +268,7 @@
     .case-head{grid-template-columns:1fr;gap:8px}
     .case-no{font-size:32px}
     .cats{column-count:1}
+    .notes{grid-template-columns:1fr}
   }
   @media (max-width:620px){
     .gal,.gal.two,.gal.four,.gal.one{grid-template-columns:1fr}
@@ -329,7 +342,7 @@
     <div class="sec-head rv">
       <div class="kicker">作品总览</div>
       <h2>十七件作品，五条路径</h2>
-      <p class="lede">按方向归档。带「图集」的作品在下方有完整的过程影像；其余是立项与过程记录，保留在册。</p>
+      <p class="lede">按方向归档，十七件都在下面。带「图集」的有完整过程影像，带「摘要」的保留文字与表格记录。</p>
     </div>
 
     <div class="cats rv">
@@ -348,8 +361,8 @@
         <ul>
           <li><span class="wt">让它转起来<em>从一颗减速电机开始</em></span><span class="wr"><span class="wy">2025</span><a class="gj" href="#case-motor">图集</a></span></li>
           <li><span class="wt">草地上的农田<em>一套会看土的灌溉系统</em></span><span class="wr"><span class="wy">2024</span><a class="gj" href="#case-field">图集</a></span></li>
-          <li><span class="wt">一杯水的提醒<em>健康饮水伴侣</em></span><span class="wr"><span class="wy">2024</span></span></li>
-          <li><span class="wt">爬上白板<em>基于树莓派与 ROS2 的磁吸爬壁清洁机器人</em></span><span class="wr"><span class="wy">2025</span></span></li>
+          <li><span class="wt">一杯水的提醒<em>健康饮水伴侣</em></span><span class="wr"><span class="wy">2024</span><a class="gj" href="#w-water">摘要</a></span></li>
+          <li><span class="wt">爬上白板<em>基于树莓派与 ROS2 的磁吸爬壁清洁机器人</em></span><span class="wr"><span class="wy">2025</span><a class="gj" href="#w-climb">摘要</a></span></li>
         </ul>
       </div>
 
@@ -358,26 +371,26 @@
         <ul>
           <li><span class="wt">看见划桨<em>一条会回应动作的龙舟</em></span><span class="wr"><span class="wy">2024</span><a class="gj" href="#case-dragon">图集</a></span></li>
           <li><span class="wt">没人按快门的地方<em>无人摄影的三种场景</em></span><span class="wr"><span class="wy">2025</span><a class="gj" href="#case-shutter">图集</a></span></li>
-          <li><span class="wt">屏幕里的人<em>数字人的设计与实现</em></span><span class="wr"><span class="wy">2026</span></span></li>
-          <li><span class="wt">灯影之间<em>当人工智能遇上皮影戏</em></span><span class="wr"><span class="wy">2026</span></span></li>
-          <li><span class="wt">光随形动<em>基于人体动作识别的灯光交互系统</em></span><span class="wr"><span class="wy">2024</span></span></li>
-          <li><span class="wt">当 AI 读作文<em>基于大模型的自助作文批阅系统</em></span><span class="wr"><span class="wy">2025</span></span></li>
+          <li><span class="wt">屏幕里的人<em>数字人的设计与实现</em></span><span class="wr"><span class="wy">2026</span><a class="gj" href="#w-digital">摘要</a></span></li>
+          <li><span class="wt">灯影之间<em>当人工智能遇上皮影戏</em></span><span class="wr"><span class="wy">2026</span><a class="gj" href="#w-shadow">摘要</a></span></li>
+          <li><span class="wt">光随形动<em>基于人体动作识别的灯光交互系统</em></span><span class="wr"><span class="wy">2024</span><a class="gj" href="#w-light">摘要</a></span></li>
+          <li><span class="wt">当 AI 读作文<em>基于大模型的自助作文批阅系统</em></span><span class="wr"><span class="wy">2025</span><a class="gj" href="#w-essay">摘要</a></span></li>
         </ul>
       </div>
 
       <div class="cat">
         <h4>设计与研究<i>02</i></h4>
         <ul>
-          <li><span class="wt">瓯塑的新配色<em>机器学习辅助的非遗配色系统</em></span><span class="wr"><span class="wy">2026</span></span></li>
-          <li><span class="wt">羽毛球研究<em>一篇研究性写作论文</em></span><span class="wr"><span class="wy">2023</span></span></li>
+          <li><span class="wt">瓯塑的新配色<em>机器学习辅助的非遗配色系统</em></span><span class="wr"><span class="wy">2026</span><a class="gj" href="#w-ou">摘要</a></span></li>
+          <li><span class="wt">羽毛球研究<em>一篇研究性写作论文</em></span><span class="wr"><span class="wy">2023</span><a class="gj" href="#w-badminton">摘要</a></span></li>
         </ul>
       </div>
 
       <div class="cat">
         <h4>社团与活动<i>02</i></h4>
         <ul>
-          <li><span class="wt">先问对问题<em>AI for Science 赛题研讨与分工</em></span><span class="wr"><span class="wy">2025</span></span></li>
-          <li><span class="wt">能玩的原型<em>AI + 游戏设计社团作品集</em></span><span class="wr"><span class="wy">2025</span></span></li>
+          <li><span class="wt">先问对问题<em>AI for Science 赛题研讨与分工</em></span><span class="wr"><span class="wy">2025</span><a class="gj" href="#w-ai4s">摘要</a></span></li>
+          <li><span class="wt">能玩的原型<em>AI + 游戏设计社团作品集</em></span><span class="wr"><span class="wy">2025</span><a class="gj" href="#w-game">摘要</a></span></li>
         </ul>
       </div>
 
@@ -640,6 +653,81 @@
       </div>
     </article>
 
+  </div>
+</section>
+
+<!-- ================= 文字记录 ================= -->
+<section class="sec alt" id="notes">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">文字记录</div>
+      <h2>另外十件，留下的文字</h2>
+      <p class="lede">这十件的过程记录以文字与表格为主，暂未配过程影像。项目要点列在下面 —— 它们同样在册，也同样值得一看。</p>
+    </div>
+
+    <div class="notes rv">
+
+      <article class="note" id="w-digital">
+        <div class="nh"><h3>屏幕里的人<span class="ns">数字人的设计与实现</span></h3><span class="ny">2026</span></div>
+        <p>围绕数字人形象展开的设计与实现记录：从形象设定，到让它有表情、能开口。项目以表格推进，把形象、动作、语音几条线并排拆开，逐项落实。</p>
+        <div class="nk">关键词：<b>形象设定 · 语音驱动 · 分工推进</b></div>
+      </article>
+
+      <article class="note" id="w-shadow">
+        <div class="nh"><h3>灯影之间<span class="ns">当人工智能遇上皮影戏</span></h3><span class="ny">2026</span></div>
+        <p>把 AI 放进皮影的灯影之间。项目尝试让传统戏曲的身段与生成式技术同台 —— 影子还是那个影子，但生成它的方式变了。</p>
+        <div class="nk">关键词：<b>皮影 · 生成式技术 · 传统与当下</b></div>
+      </article>
+
+      <article class="note" id="w-light">
+        <div class="nh"><h3>光随形动<span class="ns">基于人体动作识别的灯光交互系统</span></h3><span class="ny">2024</span></div>
+        <p>用摄像头读人的姿态，再把姿态翻译成灯光的变化。人动，光跟着变形 —— 身体在这里成了一件乐器。</p>
+        <div class="nk">关键词：<b>姿态识别 · 灯光控制 · 实时交互</b></div>
+      </article>
+
+      <article class="note" id="w-essay">
+        <div class="nh"><h3>当 AI 读作文<span class="ns">基于大模型的自助作文批阅系统</span></h3><span class="ny">2025</span></div>
+        <p>让大模型给学生作文写批阅反馈。真正的难点不在调用接口，而在提示词怎么写、评分口径怎么定、以及如何避免把「批阅」做成「套话」。</p>
+        <div class="nk">关键词：<b>大模型 · 提示词工程 · 评分口径</b></div>
+      </article>
+
+      <article class="note" id="w-water">
+        <div class="nh"><h3>一杯水的提醒<span class="ns">健康饮水伴侣</span></h3><span class="ny">2024</span></div>
+        <p>把「多喝水」这句话做成一个有行为的硬件：记录、提醒、反馈。文档按研究论文的结构走完全程 —— 研究背景、研究目的、项目规划、实现思路、使用方法，一路写到结论与展望。</p>
+        <div class="nk">关键词：<b>传感 · 提醒机制 · 论文式记录</b></div>
+      </article>
+
+      <article class="note" id="w-climb">
+        <div class="nh"><h3>爬上白板<span class="ns">基于树莓派与 ROS2 的磁吸爬壁清洁机器人</span></h3><span class="ny">2025</span></div>
+        <p>让它吸附在竖直白板上，自己爬、自己擦。方案覆盖需求分析、系统架构、核心流程、运动执行机构、视觉感知与擦除路径规划；定位与导航跑在 ROS2 上。</p>
+        <div class="nk">关键词：<b>树莓派 · ROS2 · 爬壁 · 路径规划</b></div>
+      </article>
+
+      <article class="note" id="w-ou">
+        <div class="nh"><h3>瓯塑的新配色<span class="ns">机器学习辅助的非遗配色系统</span></h3><span class="ny">2026</span></div>
+        <p>为国家级非遗瓯塑做一套配色建议工具：先读懂传统配色，再让模型学会推荐。设计与实现并重 —— 既要算得准，也要经得起老师傅看一眼。</p>
+        <div class="nk">关键词：<b>瓯塑 · 配色辅助 · 机器学习</b></div>
+      </article>
+
+      <article class="note" id="w-badminton">
+        <div class="nh"><h3>羽毛球研究<span class="ns">一篇研究性写作论文</span></h3><span class="ny">2023</span></div>
+        <p>以羽毛球为对象的研究性写作：从提出问题、查找资料，到论证与成文，完整走一遍学术写作的流程。它不炫技，但把「怎么写一篇论文」这件事拆开了。</p>
+        <div class="nk">关键词：<b>研究性写作 · 论证 · 成文</b></div>
+      </article>
+
+      <article class="note" id="w-ai4s">
+        <div class="nh"><h3>先问对问题<span class="ns">AI for Science 赛题研讨与分工</span></h3><span class="ny">2025</span></div>
+        <p>科学智能（AI for Science）方向的赛题拆解与学生分工表。做研究的第一步不是建模，而是把一个大问题切成能动手的小问题 —— 这张表就是切的过程。</p>
+        <div class="nk">关键词：<b>AI4S · 赛题拆解 · 分工</b></div>
+      </article>
+
+      <article class="note" id="w-game">
+        <div class="nh"><h3>能玩的原型<span class="ns">AI + 游戏设计社团作品集</span></h3><span class="ny">2025</span></div>
+        <p>社团的作品索引：从一张设计稿，到一个能上手玩的原型，中间隔了什么。清单式的记录，能看出一个想法是怎么被改小的。</p>
+        <div class="nk">关键词：<b>游戏设计 · 原型迭代 · 社团</b></div>
+      </article>
+
+    </div>
   </div>
 </section>
 
