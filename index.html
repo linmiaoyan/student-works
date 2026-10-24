@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>看少年科创风采 · 温州科技高级中学 学生科创作品集</title>
+<meta name="description" content="2026 世界青年科学家峰会 · 万有引力π · 青年 TALK 专场：《人工智能时代的科技教育》公开课，温州科技高级中学学生科创作品集。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>π</text></svg>">
+<style>
+  :root{
+    --ink:#0a1220;
+    --navy:#04122f;
+    --navy-2:#0a2a6b;
+    --blue:#1a4fd6;
+    --cyan:#2ec5e8;
+    --paper:#ffffff;
+    --mist:#f5f7fb;
+    --muted:#5c6a7d;
+    --line:#e4e9f1;
+    --sans:"PingFang SC","HarmonyOS Sans SC","Source Han Sans SC","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+    --serif:"Source Han Serif SC","Songti SC","SimSun",Georgia,serif;
+    --maxw:1160px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);font-size:16.5px;line-height:1.85;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;overflow:hidden;color:#eaf1ff;
+    background:
+      radial-gradient(900px 520px at 82% 18%, rgba(46,197,232,.28), transparent 62%),
+      radial-gradient(760px 480px at 12% 88%, rgba(60,110,235,.30), transparent 64%),
+      linear-gradient(158deg,#04102a 0%,#08204f 46%,#0b2f77 100%);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+    background-size:64px 64px;
+    mask-image:radial-gradient(circle at 50% 40%,#000 30%,transparent 78%);
+    -webkit-mask-image:radial-gradient(circle at 50% 40%,#000 30%,transparent 78%);
+  }
+  .hero-inner{
+    position:relative;max-width:var(--maxw);margin:0 auto;padding:74px 28px 84px;
+    display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
+    font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:#8fd6f2;border:1px solid rgba(143,214,242,.35);
+    padding:7px 14px;border-radius:999px;background:rgba(46,197,232,.07);
+  }
+  .eyebrow b{color:#fff;font-weight:600;letter-spacing:.06em}
+  h1{
+    font-size:clamp(42px,5.6vw,74px);line-height:1.1;margin:26px 0 0;
+    font-weight:800;letter-spacing:-.01em;
+    background:linear-gradient(180deg,#ffffff 20%,#a9c9ff 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero-sub{
+    margin:22px 0 0;font-size:17px;line-height:1.9;color:#b9caea;max-width:34em;
+  }
+  .hero-sub .hl{color:#7fe3ff}
+  .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+  .chip{
+    font-size:13.5px;padding:9px 16px;border-radius:10px;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+    color:#dce8ff;letter-spacing:.02em;
+  }
+  .chip span{color:#8fd6f2;margin-right:7px;font-size:12px;letter-spacing:.1em}
+
+  .poster{
+    position:relative;border-radius:18px;overflow:hidden;
+    box-shadow:0 40px 90px -30px rgba(0,10,40,.85), 0 0 0 1px rgba(255,255,255,.12);
+    transform:rotate(.6deg);
+  }
+  .poster img{width:100%;height:auto}
+  .poster::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 62%,rgba(3,12,35,.45));
+    pointer-events:none;
+  }
+  .poster-cap{
+    position:absolute;left:0;right:0;bottom:0;padding:18px 20px;z-index:2;
+    font-size:12.5px;letter-spacing:.1em;color:#cfe4ff;text-transform:uppercase;
+  }
+
+  /* ============ SECTIONS ============ */
+  section{position:relative}
+  .sec{padding:96px 0}
+  .sec.alt{background:var(--mist);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .sec-head{margin-bottom:52px}
+  .kicker{
+    font-size:12.5px;letter-spacing:.22em;color:var(--blue);font-weight:700;
+    text-transform:uppercase;display:flex;align-items:center;gap:12px;
+  }
+  .kicker::before{content:"";width:26px;height:2px;background:var(--blue);border-radius:2px}
+  h2{
+    font-size:clamp(28px,3.4vw,42px);line-height:1.25;margin:16px 0 0;font-weight:800;letter-spacing:-.01em;
+  }
+  .lede{margin:18px 0 0;color:var(--muted);font-size:16.5px;max-width:46em}
+
+  .about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:start}
+  .about-body p{margin:0 0 18px;color:#2b3648}
+  .about-body p:last-child{margin-bottom:0}
+  .quote{
+    margin:34px 0 0;padding:22px 26px;border-left:3px solid var(--blue);
+    background:linear-gradient(90deg,rgba(26,79,214,.05),transparent);
+    font-family:var(--serif);font-size:18px;line-height:1.9;color:#1b2637;
+  }
+  .stats{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .stat{background:#fff;padding:24px 26px}
+  .stat b{display:block;font-size:38px;line-height:1;font-weight:800;letter-spacing:-.02em;color:var(--navy-2)}
+  .stat b i{font-style:normal;font-size:16px;color:var(--muted);margin-left:6px;font-weight:600}
+  .stat span{display:block;margin-top:9px;font-size:13.5px;color:var(--muted);letter-spacing:.02em}
+
+  /* ============ FILTER ============ */
+  .filters{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 34px}
+  .filters button{
+    font-family:inherit;font-size:14px;cursor:pointer;
+    padding:9px 18px;border-radius:999px;border:1px solid var(--line);
+    background:#fff;color:#3a4658;transition:all .18s ease;
+  }
+  .filters button:hover{border-color:#c3d0e6;color:var(--navy)}
+  .filters button.on{background:var(--navy-2);border-color:var(--navy-2);color:#fff;box-shadow:0 8px 20px -8px rgba(10,42,107,.6)}
+  .filters button em{font-style:normal;opacity:.55;margin-left:6px;font-size:12px}
+
+  /* ============ CARDS ============ */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px}
+  .card{
+    position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;
+    padding:26px 26px 24px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+    display:flex;flex-direction:column;min-height:196px;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 22px 44px -26px rgba(10,30,70,.4);border-color:#cfdcf1}
+  .card .no{
+    font-family:var(--serif);font-size:13px;letter-spacing:.1em;color:#9aa8bd;font-weight:600;
+  }
+  .card h3{
+    font-size:18.5px;line-height:1.5;margin:10px 0 10px;font-weight:700;letter-spacing:-.005em;
+    word-break:break-word;
+  }
+  .card h3 a{background-image:linear-gradient(var(--blue),var(--blue));background-size:0 1.5px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .3s ease}
+  .card:hover h3 a{background-size:100% 1.5px}
+  .card p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.78;flex:1}
+  .card .foot{display:flex;align-items:center;gap:8px;margin-top:18px;flex-wrap:wrap}
+  .tag{
+    font-size:11.5px;letter-spacing:.06em;padding:4px 10px;border-radius:6px;
+    background:rgba(26,79,214,.07);color:#22509f;font-weight:600;
+  }
+  .tag.year{background:#f0f3f9;color:#61708a}
+  .tag.pic{background:rgba(46,197,232,.14);color:#0d7d94}
+  .card[hidden]{display:none}
+
+  /* ============ SPOTLIGHT ============ */
+  .case{border-top:1px solid var(--line);padding:72px 0}
+  .case:first-of-type{border-top:0;padding-top:0}
+  .case-head{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:baseline;margin-bottom:32px}
+  .case-no{
+    font-family:var(--serif);font-size:46px;line-height:1;font-weight:700;color:#dbe3f2;letter-spacing:-.03em;
+  }
+  .case-head h3{font-size:clamp(22px,2.4vw,30px);margin:0 0 8px;font-weight:800;letter-spacing:-.01em}
+  .case-head .case-desc{margin:0;color:var(--muted);font-size:15.5px;max-width:52em}
+  .case-meta{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0 0}
+
+  .gal{display:grid;gap:14px;grid-template-columns:repeat(3,1fr);grid-auto-flow:dense}
+  .gal.two{grid-template-columns:1fr 1fr}
+  .gal.five > .shot:first-child{grid-column:span 2}
+  .shot{
+    position:relative;overflow:hidden;border-radius:12px;background:#f1f5fa;
+    border:1px solid var(--line);cursor:zoom-in;aspect-ratio:4/3;margin:0;
+  }
+  .shot img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .shot:hover img{transform:scale(1.035)}
+  .shot figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:42px 14px 11px;
+    font-size:12.5px;line-height:1.6;color:#f2f6ff;letter-spacing:.01em;
+    text-shadow:0 1px 2px rgba(0,0,0,.4);
+    background:linear-gradient(180deg,rgba(6,16,38,0) 0%,rgba(6,16,38,.66) 40%,rgba(6,16,38,.95) 100%);
+  }
+  .shot img.contain{object-fit:contain;background:#fff}
+
+  /* 商品/图纸类：图注放在图下方，不压住内容 */
+  .shot.plain{display:flex;flex-direction:column;background:#fbfcfe}
+  .shot.plain img{flex:1;min-height:0;height:auto;object-fit:contain;padding:12px 12px 6px}
+  .shot.plain:hover img{transform:none}
+  .shot.plain figcaption{
+    position:static;padding:10px 14px 12px;color:#3d4a5e;text-shadow:none;
+    border-top:1px solid var(--line);background:none;font-size:12.5px;line-height:1.55;
+  }
+
+  /* 舵机案例的双栏 */
+  .case-split{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:stretch}
+  .qa{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .qa div{background:#fff;padding:20px 22px}
+  .qa b{display:block;font-size:15px;font-weight:700;margin-bottom:6px;color:var(--navy-2)}
+  .qa span{font-size:14px;color:var(--muted);line-height:1.72}
+
+  .case-note{
+    margin-top:30px;padding:18px 22px;border-radius:12px;background:var(--mist);
+    border:1px solid var(--line);font-size:14.5px;color:#3d4a5e;
+  }
+  .case-note b{color:var(--navy-2)}
+
+  /* ============ STEPS ============ */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:44px}
+  .step{background:#fff;padding:26px 24px}
+  .step i{font-style:normal;font-family:var(--serif);font-size:12.5px;letter-spacing:.14em;color:var(--cyan);font-weight:700}
+  .step b{display:block;margin:10px 0 8px;font-size:16px;font-weight:700}
+  .step span{font-size:13.5px;color:var(--muted);line-height:1.7}
+
+  /* ============ CLOSING ============ */
+  .closing{
+    color:#e9f0ff;position:relative;overflow:hidden;
+    background:
+      radial-gradient(700px 420px at 78% 12%, rgba(46,197,232,.22), transparent 62%),
+      linear-gradient(160deg,#051530,#0a2a6b 70%,#0c357f);
+  }
+  .closing .wrap{padding-top:88px;padding-bottom:88px}
+  .closing h2{color:#fff}
+  .closing .lede{color:#b9caea}
+  .orgs{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:52px}
+  .orgs h4{margin:0 0 12px;font-size:12.5px;letter-spacing:.2em;color:#8fd6f2;text-transform:uppercase;font-weight:700}
+  .orgs p{margin:0;font-size:15px;line-height:2;color:#cfdcf5}
+  footer{background:#030d20;color:#7f8da5;font-size:13px}
+  footer .wrap{padding:26px 28px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  /* ============ LIGHTBOX ============ */
+  .lb{
+    position:fixed;inset:0;z-index:100;display:none;place-items:center;
+    background:rgba(4,10,24,.94);padding:40px 24px;cursor:zoom-out;
+    backdrop-filter:blur(6px);
+  }
+  .lb.on{display:grid}
+  .lb img{max-width:min(1200px,94vw);max-height:86vh;width:auto;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+  .lb span{position:absolute;bottom:24px;left:0;right:0;text-align:center;color:#b9c9e4;font-size:13.5px}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+
+  @media (max-width:960px){
+    .hero-inner{grid-template-columns:1fr;gap:44px;padding:56px 22px 64px}
+    .poster{transform:none;max-width:560px}
+    .about-grid{grid-template-columns:1fr;gap:36px}
+    .steps{grid-template-columns:1fr 1fr}
+    .orgs{grid-template-columns:1fr;gap:30px}
+    .sec{padding:72px 0}
+    .gal{grid-template-columns:1fr 1fr}
+    .case-split{grid-template-columns:1fr}
+    .case-head{grid-template-columns:1fr;gap:8px}
+    .case-no{font-size:32px}
+  }
+  @media (max-width:620px){
+    .gal,.gal.two{grid-template-columns:1fr}
+    .wrap{padding:0 20px}
+  }
+  @media print{
+    .hero,.closing{background:#fff!important;color:#000!important}
+    h1{color:#000!important;-webkit-text-fill-color:#000}
+    .lb,.filters{display:none!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">2026 世界青年科学家峰会 · <b>万有引力π · 青年 TALK</b> 专场</div>
+      <h1>看少年<br>科创风采</h1>
+      <p class="hero-sub">
+        《人工智能时代的科技教育》公开课 · 学生科创作品集。
+        十七件作品，来自一间普通中学的科创中心 —— 从一颗会转的电机，到一台会认人的龙舟；
+        从激光在木板上走过的路径，到模型认出你抬手的那一帧。
+        <span class="hl">技术在这里不是答案，是孩子们提问的方式。</span>
+      </p>
+      <div class="chips">
+        <div class="chip"><span>时间</span>10 月 25 日 09:00—11:30</div>
+        <div class="chip"><span>地点</span>温州园博园中国馆</div>
+        <div class="chip"><span>作品</span>17 件 / 5 个方向</div>
+      </div>
+    </div>
+    <figure class="poster" style="margin:0">
+      <img src="assets/poster.jpg" alt="2026 世界青年科学家峰会 万有引力π·青年TALK 专场 海报">
+      <figcaption class="poster-cap">WYSS 2026 · 温州科技高级中学</figcaption>
+    </figure>
+  </div>
+</header>
+
+<!-- ================= 导言 ================= -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">关于这批作品</div>
+      <h2>不是展品，是过程</h2>
+      <p class="lede">这些文档原本只是腾讯文档里的一个个链接 —— 有的是操作手册，有的是开发日志，有的只是一张还没写完的进度表。把它们放在一起，才看得见一条路：从「我能不能让它动起来」，到「它能替谁解决什么问题」。</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-body rv">
+        <p>科创中心的设备清单写得很朴素：一台激光雕刻机、几台 3D 打印机、一堆舵机与开发板。但要把它变成课程，中间隔着大量琐碎的东西 —— 排烟管怎么接、木板怎么放平、模型为什么要加支撑、舵机的三根线到底哪根是信号线。</p>
+        <p>于是有了《科创中心入门指南》这样的文档：不讲原理，先讲怎么安全地把机器打开。也有了《什么样的舵机能够转？》这样看起来"太简单"的题目 —— 把一件小事拆到底，恰恰是工程思维最难的起点。</p>
+        <p>再往后，题目就变大了：用关键点检测识别划桨动作去驱动一条实体龙舟；用机器学习为国家级非遗瓯塑做配色辅助；用大模型给学生作文写批阅反馈；让一块白板自己把自己擦干净。技术开始落到具体的人、具体的场景上。</p>
+        <div class="quote">「万有引力π」的 π，是一个无限不循环的数。<br>少年人的好奇心大概也是这样 —— 不收敛，也不重复。</div>
+      </div>
+
+      <aside class="stats rv">
+        <div class="stat"><b>17<i>件</i></b><span>收录的学生科创作品与项目文档</span></div>
+        <div class="stat"><b>5<i>个</i></b><span>人工智能·交互 / 机器学习·设计 / 智能硬件·机器人 / 制造·工程 / 社团活动</span></div>
+        <div class="stat"><b>4<i>年</i></b><span>跨 2023—2026 的项目时间跨度</span></div>
+        <div class="stat"><b>2<i>类</i></b><span>既有可复用的操作手册，也有仍在迭代的原型</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 作品长廊 ================= -->
+<section class="sec alt" id="works">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">作品长廊</div>
+      <h2>十七件作品，五条路径</h2>
+      <p class="lede">按方向浏览。带 <span class="tag pic" style="vertical-align:middle">图文</span> 标记的作品，下方有完整的过程图集。</p>
+    </div>
+
+    <div class="filters" id="filters">
+      <button class="on" data-f="all">全部<em>17</em></button>
+      <button data-f="ai">人工智能 · 交互<em>5</em></button>
+      <button data-f="ml">机器学习 · 设计<em>3</em></button>
+      <button data-f="hw">智能硬件 · 机器人<em>4</em></button>
+      <button data-f="make">制造 · 工程实践<em>3</em></button>
+      <button data-f="club">社团 · 活动<em>2</em></button>
+    </div>
+
+    <div class="grid" id="grid">
+
+      <article class="card rv" data-cat="ai">
+        <div class="no">01 / 2026</div>
+        <h3>数字人</h3>
+        <p>从形象设定到语音驱动，试着让屏幕里的那个"人"真的开口说话、对上口型。</p>
+        <div class="foot"><span class="tag">人工智能 · 交互</span><span class="tag year">2026</span></div>
+      </article>
+
+      <article class="card rv" data-cat="ml">
+        <div class="no">02 / 2026</div>
+        <h3>AI 助力瓯塑：基于机器学习的配色辅助系统设计与实现</h3>
+        <p>为国家级非遗「瓯塑」做一套配色建议工具 —— 先读懂传统配色，再让模型学会推荐。</p>
+        <div class="foot"><span class="tag">机器学习 · 设计</span><span class="tag year">2026</span></div>
+      </article>
+
+      <article class="card rv" data-cat="ai">
+        <div class="no">03 / 2026</div>
+        <h3>当人工智能遇上皮影戏</h3>
+        <p>把 AI 放进灯影之间：传统戏曲的身段与生成式技术，能不能同台演一出？</p>
+        <div class="foot"><span class="tag">人工智能 · 交互</span><span class="tag year">2026</span></div>
+      </article>
+
+      <article class="card rv" data-cat="club">
+        <div class="no">04 / 2025</div>
+        <h3>温科高 AI4S 赛题研讨【学生活动】</h3>
+        <p>AI for Science 方向的赛题拆解与学生分工表，是学校科学智能选题的底稿。</p>
+        <div class="foot"><span class="tag">社团 · 活动</span><span class="tag year">2025</span></div>
+      </article>
+
+      <article class="card rv" data-cat="club">
+        <div class="no">05 / 2025</div>
+        <h3>AI + 游戏设计社团的作品清单</h3>
+        <p>社团作品索引：从一张设计稿，到一个能上手玩的原型，中间隔了什么。</p>
+        <div class="foot"><span class="tag">社团 · 活动</span><span class="tag year">2025</span></div>
+      </article>
+
+      <article class="card rv" data-cat="make">
+        <div class="no">06 / 2025</div>
+        <h3><a href="#case-guide">科创中心入门指南</a></h3>
+        <p>新成员的第一份手册：xTool 激光雕刻与 3D 打印的安全规范、软件界面与完整操作链路。</p>
+        <div class="foot"><span class="tag">制造 · 工程实践</span><span class="tag year">2025</span><span class="tag pic">图文</span></div>
+      </article>
+
+      <article class="card rv" data-cat="make">
+        <div class="no">07 / 2026</div>
+        <h3><a href="#case-3dp">25 3D 打印原理</a></h3>
+        <p>从模型摆正到切片生成：为什么悬空的地方必须加支撑，参数又如何决定成败。</p>
+        <div class="foot"><span class="tag">制造 · 工程实践</span><span class="tag year">2026</span><span class="tag pic">图文</span></div>
+      </article>
+
+      <article class="card rv" data-cat="hw">
+        <div class="no">08 / 2025</div>
+        <h3><a href="#case-servo">什么样的舵机能够转？</a></h3>
+        <p>用一颗 DC3V–6V 减速电机，把"能转"拆成接线、供电、控制三件事。</p>
+        <div class="foot"><span class="tag">智能硬件 · 机器人</span><span class="tag year">2025</span><span class="tag pic">图文</span></div>
+      </article>
+
+      <article class="card rv" data-cat="ai">
+        <div class="no">09 / 2024</div>
+        <h3><a href="#case-dragon">RNN + 关键点检测：打造龙舟互动体验装置</a></h3>
+        <p>识别划桨动作、判定动作阶段、驱动实体龙舟 —— 数据集、模型、物联网、船体全链路。</p>
+        <div class="foot"><span class="tag">人工智能 · 交互</span><span class="tag year">2024</span><span class="tag pic">图文</span></div>
+      </article>
+
+      <article class="card rv" data-cat="hw">
+        <div class="no">10 / 2024</div>
+        <h3>健康饮水伴侣</h3>
+        <p>把「多喝水」这句话做成一个有行为的硬件。文档按论文结构写：研究背景、研究目的、项目规划、实现思路、使用方法。</p>
+        <div class="foot"><span class="tag">智能硬件 · 机器人</span><span class="tag year">2024</span></div>
+      </article>
+
+      <article class="card rv" data-cat="ai">
+        <div class="no">11 / 2025</div>
+        <h3><a href="#case-scene">景点无人摄影服务系统的设计</a></h3>
+        <p>无人值守的摄影服务：景点、校园、证件照三种场景，各自怎么启动、怎么摄制、怎么交付。</p>
+        <div class="foot"><span class="tag">人工智能 · 交互</span><span class="tag year">2025</span><span class="tag pic">图文</span></div>
+      </article>
+
+      <article class="card rv" data-cat="ml">
+        <div class="no">12 / 2023</div>
+        <h3>论文：羽毛球研究</h3>
+        <p>以羽毛球为对象的学术写作实践，展示从提出问题到成文的完整研究流程。</p>
+        <div class="foot"><span class="tag">机器学习 · 设计</span><span class="tag year">2023</span></div>
+      </article>
+
+      <article class="card rv" data-cat="hw">
+        <div class="no">13 / 2024</div>
+        <h3><a href="#case-farm">科创馆前智慧农场灌溉项目开发日志</a></h3>
+        <p>一块真实农田的开发日志：土壤湿度、水分、温度三路传感，加一台控制水泵的执行机构。</p>
+        <div class="foot"><span class="tag">智能硬件 · 机器人</span><span class="tag year">2024</span><span class="tag pic">图文</span></div>
+      </article>
+
+      <article class="card rv" data-cat="ai">
+        <div class="no">14 / 2024</div>
+        <h3>【光随形动】：基于人体动作识别的灯光交互系统</h3>
+        <p>人动，光跟着变形。用姿态识别把身体变成一件乐器。</p>
+        <div class="foot"><span class="tag">人工智能 · 交互</span><span class="tag year">2024</span></div>
+      </article>
+
+      <article class="card rv" data-cat="ml">
+        <div class="no">15 / 2025</div>
+        <h3>基于大模型的自助作文批阅系统的设计与开发</h3>
+        <p>让大模型给学生作文写批阅反馈。难点不在调用接口，而在提示词怎么写、评分口径怎么定。</p>
+        <div class="foot"><span class="tag">机器学习 · 设计</span><span class="tag year">2025</span></div>
+      </article>
+
+      <article class="card rv" data-cat="hw">
+        <div class="no">16 / 2025</div>
+        <h3>基于树莓派的自主式白板清洁机器人系统设计</h3>
+        <p>正式题目是「基于树莓派与 ROS2 的教育型磁吸爬壁清洁机器人」—— 让它吸附在竖直白板上，自己爬、自己擦。</p>
+        <div class="foot"><span class="tag">智能硬件 · 机器人</span><span class="tag year">2025</span></div>
+      </article>
+
+      <article class="card rv" data-cat="make">
+        <div class="no">17 / 2025</div>
+        <h3><a href="#case-specimen">电子标本制作</a></h3>
+        <p>把旧手机、掌机、显卡一件件拆开，做成博物馆式的「标本图」：每个零件都有自己的位置和名字。</p>
+        <div class="foot"><span class="tag">制造 · 工程实践</span><span class="tag year">2025</span><span class="tag pic">图文</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 深度案例 ================= -->
+<section class="sec" id="cases">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">过程图集</div>
+      <h2>七份文档里的现场</h2>
+      <p class="lede">以下七件作品在腾讯文档里保留了过程照片与图纸。点击任意图片可放大查看 —— 里面既有写得很整齐的论文，也有拍到一半忘了擦镜头的现场。</p>
+    </div>
+
+    <!-- 案例一：科创中心入门指南 -->
+    <article class="case rv" id="case-guide">
+      <div class="case-head">
+        <div class="case-no">06</div>
+        <div>
+          <h3>科创中心入门指南</h3>
+          <p class="case-desc">一份写给"第一次进科创中心的人"的手册。它不解释激光的原理，而是把开机的每一步、以及会造成事故的每一个动作，先讲清楚：设备怎么摆、排烟管怎么接、图纸怎么放进 xTool Creative Space、速度与雕刻密度给多少。</p>
+          <div class="case-meta"><span class="tag">制造 · 工程实践</span><span class="tag year">2025</span><span class="tag">设备：xTool 激光雕刻机 · 3D 打印机</span></div>
+        </div>
+      </div>
+      <div class="gal five">
+        <figure class="shot">
+          <img src="assets/guide-laser.jpg" alt="xTool 激光雕刻机设备" loading="lazy">
+          <figcaption>设备本体：盖板未闭合时不会出光，第一步是把安全边界记住</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/guide-canvas.jpg" class="contain" alt="激光雕刻软件画布与刀条平面加工" loading="lazy">
+          <figcaption>在软件里把图纸摆进画布，并选择「刀条平面加工」模式</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/guide-param.jpg" class="contain" alt="激光雕刻参数面板：速度300mm每秒、灰度模式、雕刻密度100" loading="lazy">
+          <figcaption>参数面板：速度 300 mm/s、加工次数 1、图像模式灰度、雕刻密度 100、双向扫描</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/guide-device.jpg" alt="激光切割设备与排风" loading="lazy">
+          <figcaption>开机前的准备：排烟管接到窗外，材料放平</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/guide-dust.jpg" alt="排烟管道与激光切割出的小木件" loading="lazy">
+          <figcaption>切下来的小件：一次成功的打样，往往要试好几版参数</figcaption>
+        </figure>
+      </div>
+      <div class="case-note"><b>为什么把它放进作品集：</b>它是整个科创中心的"入口"。后面所有的作品，都建立在有人先把这台机器安全地教会给别人之上。</div>
+    </article>
+
+    <!-- 案例二：3D打印原理 -->
+    <article class="case rv" id="case-3dp">
+      <div class="case-head">
+        <div class="case-no">07</div>
+        <div>
+          <h3>25 3D 打印原理</h3>
+          <p class="case-desc">3D 打印最容易失败的地方，往往不是打印机，而是"没加支撑"。这份文档用切片软件里的预览一帧帧说明：模型悬空的部分为什么会塌、支撑生成在哪些位置、层厚与填充如何影响一件作品的成败与耗时。</p>
+          <div class="case-meta"><span class="tag">制造 · 工程实践</span><span class="tag year">2026</span><span class="tag">工具：切片软件 · FDM 打印机</span></div>
+        </div>
+      </div>
+      <div class="gal">
+        <figure class="shot">
+          <img src="assets/tp-model.png" class="contain" alt="绿色切片预览：人物模型的分层路径" loading="lazy">
+          <figcaption>切片预览：一层层堆叠的路径，就是打印机的「施工图」</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/tp-support.png" class="contain" alt="切片预览：模型旁生成柱状支撑" loading="lazy">
+          <figcaption>支撑生成：悬空的裙摆与手臂下方，长出了一片「脚手架」</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/tp-build.jpg" class="contain" alt="支撑结构教学示意图" loading="lazy">
+          <figcaption>拆解给初学者看：支撑长什么样、为什么这样长</figcaption>
+        </figure>
+      </div>
+      <div class="case-note"><b>为什么把它放进作品集：</b>它教会学生一件事 —— 3D 打印不是"按一下就好"，而是一连串可以被观察、被验证的判断。</div>
+    </article>
+
+    <!-- 案例三：舵机 -->
+    <article class="case rv" id="case-servo">
+      <div class="case-head">
+        <div class="case-no">08</div>
+        <div>
+          <h3>什么样的舵机能够转？</h3>
+          <p class="case-desc">一个看起来"太简单"的题目。而它的价值恰恰在于简单：把电机、电压、驱动、信号线这些名词，落到一颗能用手摸到的 DC3V–6V 减速电机上，确认它转起来的那一秒，学生才真的拥有了它。</p>
+          <div class="case-meta"><span class="tag">智能硬件 · 机器人</span><span class="tag year">2025</span><span class="tag">器件：DC3V–6V 直流减速电机 · Arduino</span></div>
+        </div>
+      </div>
+      <div class="case-split">
+        <figure class="shot">
+          <img src="assets/servo.jpg" class="contain" alt="DC3V-6V 直流减速电机，适用 Arduino" loading="lazy">
+          <figcaption>器件规格：DC3V–6V 直流减速电机，适用 Arduino</figcaption>
+        </figure>
+        <div class="qa">
+          <div>
+            <b>① 线怎么接</b>
+            <span>红黑两根是电源与地。接反了不转，接对了也只是"能通电"，还不是"能听话"。</span>
+          </div>
+          <div>
+            <b>② 电给多少</b>
+            <span>DC3V–6V 是它的舒适区。3V 转得斯文，6V 转得利落；电压不足只是嗡嗡响。</span>
+          </div>
+          <div>
+            <b>③ 怎么控制</b>
+            <span>接上 Arduino 输出 PWM，才能让它转快转慢 —— 而不只是转或不转。</span>
+          </div>
+        </div>
+      </div>
+      <div class="case-note"><b>为什么把它放进作品集：</b>所有复杂的机器人，都是从"让一个东西转起来"开始的。这是第一课。</div>
+    </article>
+
+    <!-- 案例四：龙舟 -->
+    <article class="case rv" id="case-dragon">
+      <div class="case-head">
+        <div class="case-no">09</div>
+        <div>
+          <h3>RNN + 关键点检测：打造龙舟互动体验装置</h3>
+          <p class="case-desc">这是这批作品里工程量最大的一件。学生自己拍摄、标注了 30 组划桨动作样本，用关键点检测提取人体骨架，再用循环神经网络判断动作处于哪个阶段，通过物联网把指令发给实体龙舟 —— 最后还得把船体做出来。</p>
+          <div class="case-meta"><span class="tag">人工智能 · 交互</span><span class="tag year">2024</span><span class="tag">技术：关键点检测 · RNN · 物联网 · 船体制作</span></div>
+        </div>
+      </div>
+      <div class="gal two">
+        <figure class="shot">
+          <img src="assets/dragon-data.png" class="contain" alt="划桨动作关键点数据集，Stop_1 到 Stop_30 的样本预览" loading="lazy">
+          <figcaption>数据集：Stop_1—Stop_30，每一个文件夹都是一段自己拍的划桨动作</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/dragon-flow.png" class="contain" alt="龙舟装置系统流程与实现思路" loading="lazy">
+          <figcaption>实现思路：数据采集 → 模型训练 → 推理 → 物联网 → 龙舟控制</figcaption>
+        </figure>
+      </div>
+      <div class="case-note"><b>为什么把它放进作品集：</b>它把「AI 模型」和「一条船」连在了一起。模型不是终点，让船动起来才是。</div>
+    </article>
+
+    <!-- 案例五：景点无人摄影 -->
+    <article class="case rv" id="case-scene">
+      <div class="case-head">
+        <div class="case-no">11</div>
+        <div>
+          <h3>景点无人摄影服务系统的设计</h3>
+          <p class="case-desc">一个没人守着的摄影点，怎么服务三种完全不同的人？景点游客要靠扫码自己唤醒系统；校园里学生不能用手机，于是改成距离传感器或物理按钮触发；拍证件照的人不知道怎么站，就让 AI 开口提示，免得歪头歪肩。同一个系统，三套启动逻辑。</p>
+          <div class="case-meta"><span class="tag">人工智能 · 交互</span><span class="tag year">2025</span><span class="tag">环节：启动 · 摄制 · 后续</span></div>
+        </div>
+      </div>
+      <div class="gal" style="grid-template-columns:1fr">
+        <figure class="shot" style="aspect-ratio:16/9">
+          <img src="assets/scene-flow.png" class="contain" alt="不同场景工作流程：景点、校园、证件照三种场景的启动、摄制与后续安排" loading="lazy">
+          <figcaption>三种场景 × 三个环节：启动方式、摄制引导、照片如何交付</figcaption>
+        </figure>
+      </div>
+      <div class="case-note"><b>为什么把它放进作品集：</b>它证明了一件事 —— 做产品最难的不是技术，而是想清楚「没有手机的人怎么办」。</div>
+    </article>
+
+    <!-- 案例六：智慧农场 -->
+    <article class="case rv" id="case-farm">
+      <div class="case-head">
+        <div class="case-no">13</div>
+        <div>
+          <h3>科创馆前智慧农场灌溉项目开发日志</h3>
+          <p class="case-desc">这是全部作品里最「土」的一件：传感器要真的插进土里，水管要真的接到水龙头上，控制箱还得扛得住下雨。文档写得很实在 —— 元件怎么选、接线分几步、出了问题从哪儿查起，最后才是界面。</p>
+          <div class="case-meta"><span class="tag">智能硬件 · 机器人</span><span class="tag year">2024</span><span class="tag">传感：土壤湿度 · 水分 · 温度</span></div>
+        </div>
+      </div>
+      <div class="gal">
+        <figure class="shot plain">
+          <img src="assets/farm-soil.png" alt="土壤湿度传感器 SEN0114" loading="lazy">
+          <figcaption>土壤湿度传感器（SEN0114）：缺水时输出值减小</figcaption>
+        </figure>
+        <figure class="shot plain">
+          <img src="assets/farm-water.png" alt="水分传感器 SEN0121" loading="lazy">
+          <figcaption>水分传感器（SEN0121）：检测雨水、雾水、水蒸气</figcaption>
+        </figure>
+        <figure class="shot plain">
+          <img src="assets/farm-temp.png" alt="DS18B20 温度传感器" loading="lazy">
+          <figcaption>DS18B20 温度传感器：量程 −55～+125 ℃</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/farm-box.jpg" alt="防水控制箱内部：主控板、继电器与各路线束" loading="lazy">
+          <figcaption>防水控制箱内部：主控、继电器与各路线束</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/farm-install.jpg" alt="现场施工：从水龙头分出灌溉管路" loading="lazy">
+          <figcaption>现场施工：从水龙头分出灌溉管路，接口得缠好生料带</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/farm-field.jpg" alt="木制种植槽与电控箱直接摆在草地上" loading="lazy">
+          <figcaption>种植槽与电控箱，直接摆在草地上 —— 这就是真实场地的样子</figcaption>
+        </figure>
+      </div>
+      <div class="case-note"><b>为什么把它放进作品集：</b>因为它没有"实验室感"。电线是乱的，草地是黄的，但它在真的长东西。</div>
+    </article>
+
+    <!-- 案例七：电子标本 -->
+    <article class="case rv" id="case-specimen">
+      <div class="case-head">
+        <div class="case-no">17</div>
+        <div>
+          <h3>电子标本制作</h3>
+          <p class="case-desc">它不是「数字化」，是「拆开来看」。把一件电子产品拆到零件级，再按原来的位置重新排列、逐件标注 —— 这是最古老的博物学方法，被用在了最新的东西上。从旧手机到掌机再到显卡，拆的过程本身就是一次结构课。</p>
+          <div class="case-meta"><span class="tag">制造 · 工程实践</span><span class="tag year">2025</span><span class="tag">方法：拆解 · 排布 · 标注</span></div>
+        </div>
+      </div>
+      <div class="gal">
+        <figure class="shot">
+          <img src="assets/spec-phone.png" class="contain" alt="iPhone 4 拆解标本图，各零件被标注名称" loading="lazy">
+          <figcaption>iPhone 4 的「解剖图」：屏幕、主板、扬声器、摄像头各归其位</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/spec-3ds.png" class="contain" alt="掌机 3DS 拆解标本图" loading="lazy">
+          <figcaption>掌机 3DS 的标本图：先拆到底，再一件件摆回去</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/spec-gpu.jpg" alt="显卡拆解后平铺：风扇、散热鳍片、PCB 与背板" loading="lazy">
+          <figcaption>显卡拆开平铺：风扇、散热鳍片、PCB、背板，一层一层</figcaption>
+        </figure>
+      </div>
+      <div class="case-note"><b>为什么把它放进作品集：</b>拆解是最便宜的研究方法，也是最诚实的一种 —— 不拆开，你永远不知道里面是怎么装的。</div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= 方法 ================= -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">一条共同的路径</div>
+      <h2>他们是怎么做出来的</h2>
+      <p class="lede">把 17 份文档摊开，会发现流程惊人地一致。它不高级，但足够真实 —— 也正是我们希望学生带走的东西。</p>
+    </div>
+    <div class="steps rv">
+      <div class="step"><i>STEP 01</i><b>先让它转起来</b><span>不急着讲原理。设备通电、模型跑通，先拿到一次成功。</span></div>
+      <div class="step"><i>STEP 02</i><b>把它记下来</b><span>参数、坑、失败的那几版，都写进文档。文档是给下一个人看的。</span></div>
+      <div class="step"><i>STEP 03</i><b>接到真实场景</b><span>瓯塑的配色、教室的白板、田里的灌溉 —— 问题来自生活，不是题库。</span></div>
+      <div class="step"><i>STEP 04</i><b>讲给别人听</b><span>公开课、社团分享、峰会现场。能讲清楚，才算真的懂了。</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 结语 ================= -->
+<section class="closing">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker" style="color:#8fd6f2">邀请</div>
+      <h2>欢迎来现场，看少年科创风采</h2>
+      <p class="lede">10 月 25 日上午，温州园博园中国馆。特级教师与新秀教师同台，高校专家与 AI 企业一线专家现场点评，还有「科学三分钟」科普秀。这些作品会在现场被再次打开、被追问、被质疑 —— 那才是它们真正的样子。</p>
+    </div>
+    <div class="orgs rv">
+      <div>
+        <h4>主办单位</h4>
+        <p>温州科技高级中学<br>温州市计算机学会人工智能教育专委会</p>
+      </div>
+      <div>
+        <h4>支持单位</h4>
+        <p>清华大学出版社基础教育分社<br>商汤教育研究院 · 盛通教育研究院 · 沐曦股份</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>温州科技高级中学 · 学生科创作品集 · 2026 世界青年科学家峰会 万有引力π · 青年 TALK 专场</div>
+    <div>页面内容整理自校内腾讯文档；部分原文需授权访问，此处仅呈现标题与已获授权内容。</div>
+  </div>
+</footer>
+
+<!-- 灯箱 -->
+<div class="lb" id="lb">
+  <img src="" alt="">
+  <span></span>
+</div>
+
+<script>
+(function(){
+  // 分类筛选
+  var btns = document.querySelectorAll('#filters button');
+  var cards = document.querySelectorAll('#grid .card');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      btns.forEach(function(x){ x.classList.remove('on'); });
+      b.classList.add('on');
+      var f = b.dataset.f;
+      cards.forEach(function(c){
+        c.hidden = !(f === 'all' || c.dataset.cat === f);
+      });
+    });
+  });
+
+  // 灯箱
+  var lb = document.getElementById('lb');
+  var lbImg = lb.querySelector('img');
+  var lbCap = lb.querySelector('span');
+  document.querySelectorAll('.shot').forEach(function(shot){
+    var img = shot.querySelector('img');
+    if(!img) return;
+    shot.addEventListener('click', function(){
+      lbImg.src = img.currentSrc || img.src;
+      var cap = shot.querySelector('figcaption');
+      lbCap.textContent = cap ? cap.textContent : '';
+      lb.classList.add('on');
+    });
+  });
+  lb.addEventListener('click', function(){ lb.classList.remove('on'); lbImg.src=''; });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') lb.classList.remove('on'); });
+
+  // 滚动入场
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:.08, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>
